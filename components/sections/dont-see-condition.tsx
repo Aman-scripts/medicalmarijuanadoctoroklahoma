@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export function DontSeeCondition() {
   return (
     <section className="px-6 py-24">
-      <div className="mx-auto max-w-3xl rounded-[2rem] bg-white p-10 text-center shadow-sm ring-1 ring-black/5 sm:p-14">
+      <div className="mx-auto max-w-3xl rounded-[2rem] bg-white p-6 text-center shadow-sm ring-1 ring-black/5 sm:p-14">
         <h2 className="font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
           Don&apos;t See Your Condition Listed?
         </h2>
@@ -13,9 +13,9 @@ export function DontSeeCondition() {
         </p>
         <Button
           render={<a href="#contact" />}
-          className="mt-8 h-auto gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
+          className="mt-8 h-auto max-w-full gap-2 rounded-full bg-[#0E3B2E] px-5 py-3.5 text-sm font-semibold whitespace-normal text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90 sm:px-7 sm:py-4 sm:whitespace-nowrap"
         >
-          Free consultation if not approved <ArrowRight className="size-4" />
+          Free consultation if not approved <ArrowRight className="size-4 shrink-0" />
         </Button>
       </div>
     </section>

@@ -1,6 +1,6 @@
 export function AboutInfo() {
   return (
-    <section className="bg-[#EAF1EA] px-6 py-24">
+    <section className="bg-[#EAF1EA] px-6 pt-16 pb-8 sm:py-24">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">WHY MEDICAL CANNABIS</p>

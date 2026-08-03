@@ -32,17 +32,17 @@ export function Hero() {
             Oklahoma.
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-9 flex flex-nowrap items-center gap-3 sm:gap-4">
             <Button
               render={<a href="#apply" />}
-              className="h-auto gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
+              className="h-auto flex-1 gap-1.5 whitespace-nowrap rounded-full bg-[#0E3B2E] px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90 sm:flex-none sm:gap-2 sm:px-7 sm:py-4"
             >
               Get Started <ArrowRight className="size-4" />
             </Button>
             <Button
               variant="outline"
               render={<a href="#conditions" />}
-              className="h-auto gap-2 rounded-full border-[#0E3B2E]/15 bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] hover:bg-[#0E3B2E]/5"
+              className="h-auto flex-1 gap-1.5 whitespace-nowrap rounded-full border-[#0E3B2E]/15 bg-white px-5 py-3.5 text-sm font-semibold text-[#0E3B2E] hover:bg-[#0E3B2E]/5 sm:flex-none sm:gap-2 sm:px-7 sm:py-4"
             >
               Check Eligibility
             </Button>

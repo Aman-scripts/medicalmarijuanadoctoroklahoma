@@ -11,7 +11,7 @@ export function AboutAppointment() {
   return (
     <section className="px-6 py-24">
       <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[2rem] shadow-xl shadow-[#0E3B2E]/10 lg:grid-cols-[0.85fr_1.15fr]">
-        <div className="flex flex-col justify-center bg-white p-10 text-center sm:p-12">
+        <div className="flex flex-col justify-center bg-white p-8 text-center sm:p-12">
           <h2 className="font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
             Get Your Appointment
           </h2>
@@ -29,11 +29,11 @@ export function AboutAppointment() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 divide-x divide-white/25 bg-gradient-to-br from-[#0E3B2E] to-[#8FD66B]/70 px-6 py-12 sm:px-10">
+        <div className="grid grid-cols-3 divide-x divide-white/25 bg-gradient-to-br from-[#0E3B2E] to-[#8FD66B]/70 px-3 py-10 sm:px-10 sm:py-12">
           {stats.map(({ value, label }) => (
-            <div key={label} className="flex flex-col items-center justify-center text-center px-2">
-              <p className="font-heading text-4xl font-medium text-white sm:text-5xl">{value}</p>
-              <p className="mt-3 text-xs font-semibold tracking-wide text-white/85 sm:text-sm">
+            <div key={label} className="flex flex-col items-center justify-center px-1 text-center">
+              <p className="font-heading text-2xl font-medium text-white sm:text-4xl lg:text-5xl">{value}</p>
+              <p className="mt-2 text-[10px] leading-tight font-semibold tracking-wide text-white/85 sm:mt-3 sm:text-xs lg:text-sm">
                 {label}
               </p>
             </div>

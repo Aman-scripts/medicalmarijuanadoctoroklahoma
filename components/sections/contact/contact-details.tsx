@@ -36,19 +36,19 @@ export function ContactDetails() {
       </div>
 
       <div className="mx-auto mt-12 grid max-w-6xl gap-6 lg:grid-cols-[1fr_1.1fr]">
-        <div className="grid gap-6 sm:grid-cols-3 lg:grid-cols-1">
+        <div className="grid min-w-0 gap-6 sm:grid-cols-3 lg:grid-cols-1">
           {details.map(({ icon: Icon, label, value, href }) => (
             <a
               key={label}
               href={href}
-              className="flex items-start gap-4 rounded-2xl border border-black/5 bg-white p-6 text-left shadow-sm transition-shadow hover:shadow-md lg:items-center"
+              className="flex min-w-0 items-start gap-4 rounded-2xl border border-black/5 bg-white p-6 text-left shadow-sm transition-shadow hover:shadow-md lg:items-center"
             >
               <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#0E3B2E]/5 text-[#4C9A2A]">
                 <Icon className="size-5" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm font-semibold text-[#0E3B2E]">{label}</p>
-                <p className="mt-1 text-sm leading-relaxed text-[#0E3B2E]/60">{value}</p>
+                <p className="mt-1 text-sm leading-relaxed break-words text-[#0E3B2E]/60">{value}</p>
               </div>
             </a>
           ))}
