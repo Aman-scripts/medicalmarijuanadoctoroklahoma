@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
 import { ContactHero } from "@/components/sections/contact/contact-hero";
 import { ContactDetails } from "@/components/sections/contact/contact-details";
 import { ContactForm } from "@/components/sections/contact/contact-form";
@@ -15,6 +16,7 @@ export default function ContactUsPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
+      <PageBreadcrumb page="Contact Us" />
       <main>
         <ContactHero />
         <ContactDetails />

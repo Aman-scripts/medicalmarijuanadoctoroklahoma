@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
 import { FaqHero } from "@/components/sections/faq/faq-hero";
 import { FaqList } from "@/components/sections/faq/faq-list";
 
@@ -14,10 +15,11 @@ export default function FaqPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
-      {/* <main>
+      <PageBreadcrumb page="FAQ" />
+      <main>
         <FaqHero />
         <FaqList />
-      </main> */}
+      </main>
       <SiteFooter />
     </div>
   );

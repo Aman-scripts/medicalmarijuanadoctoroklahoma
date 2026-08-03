@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
 import { AboutHero } from "@/components/sections/about/about-hero";
 import { AboutValues } from "@/components/sections/about/about-values";
 import { AboutAppointment } from "@/components/sections/about/about-appointment";
@@ -17,6 +18,7 @@ export default function AboutUsPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
+      <PageBreadcrumb page="About Us" />
       <main>
         <AboutHero />
         <AboutValues />
