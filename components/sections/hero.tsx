@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, BadgeCheck, Lock, ShieldCheck, Sparkles, Star, ZapIcon } from "lucide-react";
+import { ArrowRight, Lock, ShieldCheck, Star, ZapIcon } from "lucide-react";
 
 export function Hero() {
   const badges = [
@@ -21,12 +21,7 @@ export function Hero() {
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#0E3B2E]/15 bg-white/70 px-4 py-1.5 text-xs font-semibold tracking-wide text-[#0E3B2E] shadow-sm">
-            <Sparkles className="size-3.5 text-[#4C9A2A]" />
-            OKLAHOMA&apos;S TRUSTED MMJ PLATFORM
-          </div>
-
-          <h1 className="mt-6 font-heading text-4xl leading-[1.1] font-medium tracking-tight text-[#0E3B2E] sm:text-5xl">
+          <h1 className="font-heading text-4xl leading-[1.1] font-medium tracking-tight text-[#0E3B2E] sm:text-5xl">
             Get Approved by an Oklahoma Medical Marijuana Doctor and Receive Your{" "}
             <span className="italic text-[#4C9A2A]">Digital Card in Minutes!</span>
           </h1>
@@ -74,19 +69,6 @@ export function Hero() {
               priority
               className="h-[420px] w-full object-cover sm:h-[480px]"
             />
-          </div>
-
-          <div className="absolute -bottom-8 -left-6 w-64 rounded-2xl border border-black/5 bg-white p-5 shadow-xl sm:-left-10">
-            <div className="flex items-center gap-2 text-[11px] font-semibold tracking-wide text-[#4C9A2A]">
-              <BadgeCheck className="size-4" />
-              INSTANT APPROVAL
-            </div>
-            <p className="mt-2 font-heading text-lg font-medium text-[#0E3B2E]">
-              Digital card in minutes
-            </p>
-            <p className="mt-1.5 text-xs leading-relaxed text-[#0E3B2E]/60">
-              Licensed Oklahoma doctors review and approve your application same-day.
-            </p>
           </div>
         </div>
       </div>

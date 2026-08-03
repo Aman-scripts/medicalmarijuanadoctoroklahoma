@@ -8,8 +8,7 @@ export function DontSeeCondition() {
           Don&apos;t See Your Condition Listed?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[#0E3B2E]/60">
-          Oklahoma law allows doctors to recommend medical marijuana for any condition they
-          believe may benefit from treatment.
+        Oklahoma law allows doctors to recommend medical marijuana for any condition they believe could benefit from treatment. Our licensed physicians will evaluate your specific case during consultation.
         </p>
         <a
           href="#contact"

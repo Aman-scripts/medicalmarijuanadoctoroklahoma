@@ -56,7 +56,7 @@ export function HowItWorks() {
           </div>
           <a
             href="#apply"
-            className="inline-flex items-center gap-2 rounded-full bg-[#F2C14E] px-7 py-4 text-sm font-semibold text-[#0E3B2E] transition-colors hover:bg-[#F2C14E]/90"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
           >
             Click to Start <ArrowRight className="size-4" />
           </a>

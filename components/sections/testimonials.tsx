@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { ArrowRight, BadgeCheck, Star } from "lucide-react";
 import { GoogleIcon } from "@/components/icons/google-icon";
 
@@ -13,7 +16,9 @@ export function Testimonials() {
       name: "Seth Rucker",
       time: "1 year ago",
       rating: 3,
-      text: "They overcharge for their services. $150 for them to send a signed form for the application that I had to submit myself which cost an additional $100. For the…",
+      text: "They overcharge for their services. $150 for them to send a signed form for the application that I had to submit myself which cost an additional $100. For the $150 most doctors will submit the forms and application for you. Going through them cost me up wards of $250 and they have old and invalid phone numbers on their customer support page. I thought it was a scam at first until I received my call from the doctor and the signed patient license. There are definitely easier means of getting a card through other doctors. Not a scam but a ripoff.",
+      truncatedText:
+        "They overcharge for their services. $150 for them to send a signed form for the application that I had to submit myself which cost an additional $100. For the…",
       truncated: true,
     },
     {
@@ -23,6 +28,8 @@ export function Testimonials() {
       text: "Very good",
     },
   ];
+
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
   const avatarColors = ["from-[#8B5CF6] to-[#6D28D9]", "from-[#2563EB] to-[#1D4ED8]", "from-[#4C9A2A] to-[#0E3B2E]"];
 
@@ -37,7 +44,7 @@ export function Testimonials() {
           Real testimonials from Oklahoma patients who found relief through our platform.
         </p>
 
-        <div className="mt-14 grid gap-6 text-left sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid items-start gap-6 text-left sm:grid-cols-2 lg:grid-cols-3">
           {reviews.map((review, i) => (
             <div key={review.name} className="flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
               <div className="flex items-start justify-between">
@@ -71,10 +78,16 @@ export function Testimonials() {
                 <BadgeCheck className="ml-1 size-4 text-[#4285F4]" />
               </div>
 
-              <p className="mt-3 text-sm leading-relaxed text-[#0E3B2E]/75">{review.text}</p>
+              <p className="mt-3 text-sm leading-relaxed text-[#0E3B2E]/75">
+                {review.truncated && !expanded[review.name] ? review.truncatedText : review.text}
+              </p>
               {review.truncated && (
-                <button type="button" className="mt-1 self-start text-xs font-medium text-[#0E3B2E]/40 hover:text-[#0E3B2E]/60">
-                  Read more
+                <button
+                  type="button"
+                  onClick={() => setExpanded((prev) => ({ ...prev, [review.name]: !prev[review.name] }))}
+                  className="mt-1 self-start text-xs font-medium text-[#0E3B2E]/40 hover:text-[#0E3B2E]/60"
+                >
+                  {expanded[review.name] ? "Show less" : "Read more"}
                 </button>
               )}
             </div>

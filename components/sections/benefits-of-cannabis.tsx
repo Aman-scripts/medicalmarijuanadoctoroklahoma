@@ -39,7 +39,7 @@ export function BenefitsOfCannabis() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:items-center">
+        <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:items-stretch">
           <div className="grid gap-5 sm:grid-cols-2 lg:col-span-7">
             {benefits.map(({ icon: Icon, title, description }) => (
               <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
@@ -52,13 +52,12 @@ export function BenefitsOfCannabis() {
             ))}
           </div>
 
-          <div className="relative overflow-hidden rounded-[2rem] shadow-xl shadow-black/20 lg:col-span-5">
+          <div className="relative min-h-[320px] overflow-hidden rounded-[2rem] shadow-xl shadow-black/20 lg:col-span-5 lg:min-h-0">
             <Image
               src="/benefits-of-cannabies-section.webp"
               alt="Doctor consulting a patient about medical cannabis treatment"
-              width={700}
-              height={860}
-              className="h-[320px] w-full object-cover lg:h-[480px]"
+              fill
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0E3B2E]/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-center gap-2 rounded-2xl bg-white/95 px-4 py-3 shadow-lg backdrop-blur">
@@ -74,12 +73,12 @@ export function BenefitsOfCannabis() {
 
         <div className="mt-12 flex flex-col items-center gap-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/70">
-            <Star className="size-4 text-[#F2C14E]" />
+            <Star className="size-4 text-[#8FD66B]" />
             98% Customer Satisfaction - Helping patients manage their conditions
           </div>
           <a
             href="#apply"
-            className="inline-flex items-center gap-2 rounded-full bg-[#F2C14E] px-7 py-4 text-sm font-semibold text-[#0E3B2E] transition-colors hover:bg-[#F2C14E]/90"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
           >
             Get Cannabis for Your Condition <ArrowRight className="size-4" />
           </a>

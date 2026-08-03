@@ -14,8 +14,7 @@ export function QualifyingConditions() {
             What Are The Qualifying Medical Conditions?
           </h2>
           <p className="mt-4 text-[#0E3B2E]/70">
-            Oklahoma has some of the most inclusive medical marijuana laws, covering a wide range
-            of qualifying conditions.
+          Oklahoma has some of the most inclusive medical marijuana laws. If you have any condition that a physician believes could benefit from medical cannabis, you may qualify.
           </p>
         </div>
 

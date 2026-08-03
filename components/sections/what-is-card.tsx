@@ -22,19 +22,17 @@ export function WhatIsCard() {
             What is An Oklahoma Medical Marijuana Card?
           </h2>
           <p className="mt-4 text-[#0E3B2E]/60">
-            A Medical Marijuana Card in Oklahoma gives you legal protection and access to cannabis
-            for therapeutic purposes.
+          A Medical Marijuana Card in Oklahoma gives you legal protection and access to cannabis for therapeutic purposes. With your card, you can legally consume, possess, and cultivate medical marijuana as recommended by licensed physicians
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:items-center">
-          <div className="relative overflow-hidden rounded-[2rem] shadow-xl shadow-[#0E3B2E]/10 lg:col-span-5">
+        <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:items-stretch">
+          <div className="relative min-h-[320px] overflow-hidden rounded-[2rem] shadow-xl shadow-[#0E3B2E]/10 lg:col-span-5 lg:min-h-0">
             <Image
               src="/what-is-card-section.jpg"
               alt="Patient purchasing cannabis products at a licensed Oklahoma dispensary"
-              width={700}
-              height={860}
-              className="h-[320px] w-full object-cover lg:h-[520px]"
+              fill
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0E3B2E]/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-center gap-2 rounded-2xl bg-white/95 px-4 py-3 shadow-lg backdrop-blur">
@@ -68,7 +66,7 @@ export function WhatIsCard() {
             </div>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-[#F2C14E] px-7 py-4 text-sm font-semibold text-[#0E3B2E] transition-colors hover:bg-[#F2C14E]/90"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
             >
               Apply Your Card at $149 <ArrowRight className="size-4" />
             </a>
