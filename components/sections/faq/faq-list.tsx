@@ -1,7 +1,9 @@
-"use client";
-
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const faqs = [
   {
@@ -105,8 +107,6 @@ const faqs = [
 ];
 
 export function FaqList() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
   return (
     <section className="px-6 pt-8 pb-24">
       <div className="mx-auto max-w-3xl">
@@ -114,38 +114,25 @@ export function FaqList() {
           Common Questions Asked by Oklahoma Patients
         </h2>
 
-        <div className="mt-10 space-y-3">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div
-                key={faq.question}
-                className="overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm"
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
-                >
-                  <span className="text-sm font-semibold text-[#0E3B2E] sm:text-base">
-                    {faq.question}
-                  </span>
-                  <ChevronDown
-                    className={`size-5 shrink-0 text-[#4C9A2A] transition-transform ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {isOpen && (
-                  <p className="px-6 pb-5 text-sm leading-relaxed text-[#0E3B2E]/65">
-                    {faq.answer}
-                  </p>
-                )}
-              </div>
-            );
-          })}
-        </div>
+        <Accordion
+          defaultValue={[0]}
+          className="mt-10 flex flex-col gap-3 rounded-none border-none bg-transparent"
+        >
+          {faqs.map((faq, index) => (
+            <AccordionItem
+              key={faq.question}
+              value={index}
+              className="overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm"
+            >
+              <AccordionTrigger className="px-6 py-5 text-sm font-semibold text-[#0E3B2E] hover:no-underline sm:text-base [&_svg]:text-[#4C9A2A]">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="px-6 text-sm leading-relaxed text-[#0E3B2E]/65">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );

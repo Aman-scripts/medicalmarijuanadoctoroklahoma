@@ -1,4 +1,5 @@
 import { ArrowRight, FileCheck2, Globe2, MapPin, ShieldCheck, Sprout, Stethoscope, Wallet, ZapIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function WhyChoose() {
   const features = [
@@ -15,9 +16,9 @@ export function WhyChoose() {
   return (
     <section id="about" className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-xl text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">WHY CHOOSE US</p>
-          <h2 className="mt-3 font-heading text-4xl font-medium tracking-tight text-[#0E3B2E]">
+          <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:whitespace-nowrap sm:text-4xl">
             Why Choose MMJ Doctor Oklahoma?
           </h2>
           <p className="mt-4 text-[#0E3B2E]/60">
@@ -38,12 +39,12 @@ export function WhyChoose() {
         </div>
 
         <div className="mt-12 text-center">
-          <a
-            href="#apply"
-            className="inline-flex items-center gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
+          <Button
+            render={<a href="#apply" />}
+            className="h-auto gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
           >
             Book Your Appointment Now <ArrowRight className="size-4" />
-          </a>
+          </Button>
         </div>
       </div>
     </section>

@@ -14,10 +14,10 @@ export default function FaqPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
-      <main>
+      {/* <main>
         <FaqHero />
         <FaqList />
-      </main>
+      </main> */}
       <SiteFooter />
     </div>
   );

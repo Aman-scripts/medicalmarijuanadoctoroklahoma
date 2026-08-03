@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, BriefcaseMedical, Clock, ShieldCheck, Sparkles, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function BenefitsOfCannabis() {
   const benefits = [
@@ -76,12 +77,12 @@ export function BenefitsOfCannabis() {
             <Star className="size-4 text-[#8FD66B]" />
             98% Customer Satisfaction - Helping patients manage their conditions
           </div>
-          <a
-            href="#apply"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
+          <Button
+            render={<a href="#apply" />}
+            className="h-auto gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
           >
             Get Cannabis for Your Condition <ArrowRight className="size-4" />
-          </a>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function AboutAppointment() {
   const stats = [
@@ -19,12 +20,12 @@ export function AboutAppointment() {
             minutes.
           </p>
           <div className="mt-8 flex justify-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
+            <Button
+              render={<a href="#contact" />}
+              className="h-auto gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
             >
               Get Started <ArrowRight className="size-4" />
-            </a>
+            </Button>
           </div>
         </div>
 

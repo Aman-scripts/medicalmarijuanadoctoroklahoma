@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function SiteHeader() {
   return (
@@ -14,12 +15,12 @@ export function SiteHeader() {
           <Link href="/contact-us" className="transition-colors hover:text-[#0E3B2E]">Contact Us</Link>
           <Link href="/faq" className="transition-colors hover:text-[#0E3B2E]">FAQ</Link>
         </nav>
-        <a
-          href="#apply"
-          className="hidden items-center gap-1.5 rounded-full bg-[#0E3B2E] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0E3B2E]/90 md:inline-flex"
+        <Button
+          render={<a href="#apply" />}
+          className="hidden h-auto gap-1.5 rounded-full bg-[#0E3B2E] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#0E3B2E]/90 md:inline-flex"
         >
           Get Your OK MMJ Card <ArrowRight className="size-4" />
-        </a>
+        </Button>
       </div>
     </header>
   );

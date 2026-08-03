@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function DontSeeCondition() {
   return (
@@ -10,12 +11,12 @@ export function DontSeeCondition() {
         <p className="mx-auto mt-4 max-w-xl text-[#0E3B2E]/60">
         Oklahoma law allows doctors to recommend medical marijuana for any condition they believe could benefit from treatment. Our licensed physicians will evaluate your specific case during consultation.
         </p>
-        <a
-          href="#contact"
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
+        <Button
+          render={<a href="#contact" />}
+          className="mt-8 h-auto gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
         >
           Free consultation if not approved <ArrowRight className="size-4" />
-        </a>
+        </Button>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, BadgeCheck, Home as HomeIcon, Leaf, MapPin, Repeat, ShieldCheck, Sprout, Stethoscope } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function WhatIsCard() {
   const benefits = [
@@ -16,9 +17,9 @@ export function WhatIsCard() {
   return (
     <section id="apply" className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">GET STARTED</p>
-          <h2 className="mt-3 font-heading text-4xl font-medium tracking-tight text-[#0E3B2E]">
+          <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:whitespace-nowrap sm:text-4xl">
             What is An Oklahoma Medical Marijuana Card?
           </h2>
           <p className="mt-4 text-[#0E3B2E]/60">
@@ -64,12 +65,12 @@ export function WhatIsCard() {
               <p className="text-xs font-semibold tracking-wide text-[#8FD66B]">ONE-TIME FEE</p>
               <p className="font-heading text-4xl font-medium text-white">$149</p>
             </div>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
+            <Button
+              render={<a href="#contact" />}
+              className="h-auto gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
             >
               Apply Your Card at $149 <ArrowRight className="size-4" />
-            </a>
+            </Button>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, Lock, ShieldCheck, Star, ZapIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Hero() {
   const badges = [
@@ -32,18 +33,19 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
-            <a
-              href="#apply"
-              className="inline-flex items-center gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
+            <Button
+              render={<a href="#apply" />}
+              className="h-auto gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
             >
               Get Started <ArrowRight className="size-4" />
-            </a>
-            <a
-              href="#conditions"
-              className="inline-flex items-center gap-2 rounded-full border border-[#0E3B2E]/15 bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] transition-colors hover:bg-[#0E3B2E]/5"
+            </Button>
+            <Button
+              variant="outline"
+              render={<a href="#conditions" />}
+              className="h-auto gap-2 rounded-full border-[#0E3B2E]/15 bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] hover:bg-[#0E3B2E]/5"
             >
               Check Eligibility
-            </a>
+            </Button>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3">

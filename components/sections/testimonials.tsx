@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowRight, BadgeCheck, Star } from "lucide-react";
 import { GoogleIcon } from "@/components/icons/google-icon";
+import { Button } from "@/components/ui/button";
 
 export function Testimonials() {
   const reviews = [
@@ -82,26 +83,31 @@ export function Testimonials() {
                 {review.truncated && !expanded[review.name] ? review.truncatedText : review.text}
               </p>
               {review.truncated && (
-                <button
+                <Button
                   type="button"
+                  variant="ghost"
                   onClick={() => setExpanded((prev) => ({ ...prev, [review.name]: !prev[review.name] }))}
-                  className="mt-1 self-start text-xs font-medium text-[#0E3B2E]/40 hover:text-[#0E3B2E]/60"
+                  className="mt-1 h-auto self-start p-0 text-xs font-medium text-[#0E3B2E]/40 hover:bg-transparent hover:text-[#0E3B2E]/60"
                 >
                   {expanded[review.name] ? "Show less" : "Read more"}
-                </button>
+                </Button>
               )}
             </div>
           ))}
         </div>
 
-        <a
-          href="https://maps.app.goo.gl/8HTa3Scrh8eU3Wfi7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-12 inline-flex items-center gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
+        <Button
+          render={
+            <a
+              href="https://maps.app.goo.gl/8HTa3Scrh8eU3Wfi7"
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          }
+          className="mt-12 h-auto gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
         >
           Read More Reviews <ArrowRight className="size-4" />
-        </a>
+        </Button>
       </div>
     </section>
   );

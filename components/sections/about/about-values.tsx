@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, Compass, Eye } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function AboutValues() {
   return (
@@ -26,12 +27,12 @@ export function AboutValues() {
             offered legitimate services online with the responsibility of delighting you always
             with an excellent service experience.
           </p>
-          <a
-            href="#contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
+          <Button
+            render={<a href="#contact" />}
+            className="mt-8 h-auto gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
           >
             Get Recommendations <ArrowRight className="size-4" />
-          </a>
+          </Button>
         </div>
       </div>
 

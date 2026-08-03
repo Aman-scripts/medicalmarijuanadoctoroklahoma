@@ -8,9 +8,9 @@ export function QualifyingConditions() {
   return (
     <section id="conditions" className="bg-[#C9E9BE] px-6 py-24">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold tracking-[0.2em] text-[#0E3B2E]/60">ELIGIBILITY</p>
-          <h2 className="mt-3 font-heading text-4xl font-medium tracking-tight text-[#0E3B2E]">
+          <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:whitespace-nowrap sm:text-4xl">
             What Are The Qualifying Medical Conditions?
           </h2>
           <p className="mt-4 text-[#0E3B2E]/70">

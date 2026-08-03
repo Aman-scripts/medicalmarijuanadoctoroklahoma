@@ -2,6 +2,10 @@
 
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -31,54 +35,54 @@ export function ContactForm() {
               setSubmitted(true);
             }}
           >
-            <div>
-              <label htmlFor="name" className="text-sm font-medium text-[#0E3B2E]">
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="name" className="text-sm font-medium text-[#0E3B2E]">
                 Name
-              </label>
-              <input
+              </Label>
+              <Input
                 id="name"
                 name="name"
                 type="text"
                 required
-                className="mt-2 w-full rounded-xl border border-[#0E3B2E]/15 bg-[#F6F5F0] px-4 py-3 text-sm text-[#0E3B2E] outline-none focus:border-[#4C9A2A]"
                 placeholder="Your name"
+                className="h-auto rounded-xl border-[#0E3B2E]/15 bg-[#F6F5F0] px-4 py-3 text-sm text-[#0E3B2E] focus-visible:border-[#4C9A2A] focus-visible:ring-[#4C9A2A]/30"
               />
             </div>
 
-            <div>
-              <label htmlFor="email" className="text-sm font-medium text-[#0E3B2E]">
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="email" className="text-sm font-medium text-[#0E3B2E]">
                 Email Address
-              </label>
-              <input
+              </Label>
+              <Input
                 id="email"
                 name="email"
                 type="email"
                 required
-                className="mt-2 w-full rounded-xl border border-[#0E3B2E]/15 bg-[#F6F5F0] px-4 py-3 text-sm text-[#0E3B2E] outline-none focus:border-[#4C9A2A]"
                 placeholder="you@example.com"
+                className="h-auto rounded-xl border-[#0E3B2E]/15 bg-[#F6F5F0] px-4 py-3 text-sm text-[#0E3B2E] focus-visible:border-[#4C9A2A] focus-visible:ring-[#4C9A2A]/30"
               />
             </div>
 
-            <div>
-              <label htmlFor="message" className="text-sm font-medium text-[#0E3B2E]">
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="message" className="text-sm font-medium text-[#0E3B2E]">
                 Message
-              </label>
-              <textarea
+              </Label>
+              <Textarea
                 id="message"
                 name="message"
                 required
                 rows={5}
-                className="mt-2 w-full resize-none rounded-xl border border-[#0E3B2E]/15 bg-[#F6F5F0] px-4 py-3 text-sm text-[#0E3B2E] outline-none focus:border-[#4C9A2A]"
                 placeholder="How can we help?"
+                className="min-h-32 rounded-xl border-[#0E3B2E]/15 bg-[#F6F5F0] px-4 py-3 text-sm text-[#0E3B2E] focus-visible:border-[#4C9A2A] focus-visible:ring-[#4C9A2A]/30"
               />
             </div>
 
-            <button
+            <Button
               type="submit"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
+              className="h-auto w-full gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
             >
               Send Message <ArrowRight className="size-4" />
-            </button>
+            </Button>
           </form>
         )}
       </div>
