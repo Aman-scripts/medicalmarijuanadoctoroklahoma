@@ -13,6 +13,7 @@ import {
 
 const navLinks = [
   { href: "/about-us", label: "About Us" },
+  { href: "/doctors", label: "Our Doctors" },
   { href: "/contact-us", label: "Contact Us" },
   { href: "/faq", label: "FAQ" },
 ];
@@ -22,7 +23,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-black/5 bg-[#F6F5F0]/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Medical Marijuana Doctor Oklahoma" width={220} height={56} className="h-14 w-auto" priority />
+          <Image src="/logo.png" alt="Medical Marijuana Doctor Oklahoma" width={220} height={56} className="h-14 w-auto" style={{ width: "auto" }} priority />
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium text-[#0E3B2E]/70 md:flex">
           {navLinks.map((link) => (

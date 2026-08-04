@@ -18,8 +18,12 @@ export function ContactForm() {
             Get In Touch
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-[#0E3B2E]/60">
-            We&apos;d love to provide you with the best MMJ Card service experience online.
-            Address us with your query and we&apos;ll be in touch shortly.
+            Got a question before booking? Send it over and someone from our team will follow
+            up, usually within a business day. If it&apos;s something time-sensitive, calling{" "}
+            <a href="tel:+14054451637" className="font-medium text-[#0E3B2E] underline underline-offset-2">
+              +1 (405) 445-1637
+            </a>{" "}
+            directly will get you an answer faster.
           </p>
         </div>
 

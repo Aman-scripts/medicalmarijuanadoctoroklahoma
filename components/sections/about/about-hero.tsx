@@ -16,16 +16,11 @@ export function AboutHero() {
           </h1>
 
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#0E3B2E]/70">
-            Medical Marijuana Doctor Oklahoma is a reliable brand that has excelled in serving
-            legitimate services online for years. Being an unswerving source for obtaining a
-            valid Medical Marijuana Card at your doorstep, MMJ Doctor Oklahoma has tried making
-            the whole process even easier for you so that you can get the very best from the
-            comfort of your home.
-          </p>
-
-          <p className="mt-4 max-w-lg text-sm leading-relaxed text-[#0E3B2E]/60">
-            We have a powerful team of professionals that are proficient in delivering legitimate
-            services online.
+            Medical Marijuana Doctor Oklahoma connects Oklahoma patients with state-licensed
+            physicians for medical marijuana evaluations, entirely by telehealth. We built this
+            site specifically for Oklahoma, because the state&apos;s application process through
+            the Oklahoma Medical Marijuana Authority (OMMA) has its own rules and forms, and
+            patients here deserve a service built around that, not a generic national one.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">

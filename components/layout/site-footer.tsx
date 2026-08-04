@@ -1,6 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import {
+  Accessibility,
+  CheckCheck,
+  Clock,
+  EyeOff,
+  HandCoins,
+  Mail,
+  MapPin,
+  PenLine,
+  Phone,
+  ShieldCheck,
+  TriangleAlert,
+  Truck,
+  Video,
+} from "lucide-react";
 import { FacebookIcon } from "@/components/icons/facebook-icon";
 import { GoogleIcon } from "@/components/icons/google-icon";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
@@ -24,10 +38,21 @@ export function SiteFooter() {
     "Board Certified Physicians",
     "State Authorized Evaluators",
   ];
+  const legalLinks = [
+    { label: "Privacy Policy", href: "/privacy-policy", icon: EyeOff },
+    { label: "HIPAA Compliance", href: "/hipaa-compliance", icon: ShieldCheck },
+    { label: "Consent for Telehealth", href: "/consent-for-telehealth", icon: Video },
+    { label: "Terms of Use", href: "/terms-of-use", icon: CheckCheck },
+    { label: "Refund Policy", href: "/refund-policy", icon: HandCoins },
+    { label: "Shipping Policy", href: "/shipping-policy", icon: Truck },
+    { label: "Accessibility Statement", href: "/accessibility-statement", icon: Accessibility },
+    { label: "Editorial Policy", href: "/editorial-policy", icon: PenLine },
+    { label: "Disclaimer", href: "/disclaimer", icon: TriangleAlert },
+  ];
 
   return (
     <footer id="contact" className="bg-[#0E3B2E] px-6 pt-20 pb-10">
-      <div className="mx-auto grid max-w-6xl gap-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1.1fr]">
+      <div className="mx-auto grid max-w-6xl gap-12 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.85fr_0.85fr_0.95fr_1fr]">
         <div>
           <Image
             src="/logo.png"
@@ -126,6 +151,25 @@ export function SiteFooter() {
               <Clock className="mt-0.5 size-4 shrink-0 text-[#8FD66B]" />
               9:00 am to 10:00 pm
             </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold tracking-[0.15em] text-[#8FD66B]">
+            LEGAL, COMPLIANCE &amp; EDITORIAL
+          </p>
+          <ul className="mt-5 space-y-3">
+            {legalLinks.map(({ label, href, icon: Icon }) => (
+              <li key={label}>
+                <Link
+                  href={href}
+                  className="flex items-center gap-2.5 text-sm text-white/65 transition-colors hover:text-white"
+                >
+                  <Icon className="size-4 shrink-0 text-[#8FD66B]" />
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

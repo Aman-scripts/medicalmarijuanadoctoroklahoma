@@ -1,0 +1,28 @@
+import { User } from "lucide-react";
+
+export function AboutLeadership() {
+  return (
+    <section className="px-6 py-24">
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">LEADERSHIP</p>
+        <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
+          Who&apos;s Behind This
+        </h2>
+      </div>
+
+      <div className="mx-auto mt-12 max-w-sm">
+        <div className="flex flex-col items-center rounded-2xl border border-black/5 bg-white p-8 text-center shadow-sm">
+          <div className="flex size-20 items-center justify-center rounded-full bg-[#EAF1EA] text-[#0E3B2E]/40">
+            <User className="size-9" />
+          </div>
+          <h3 className="mt-5 font-heading text-lg font-medium text-[#0E3B2E]">Gourav Sharma</h3>
+          <p className="mt-1 text-xs font-semibold tracking-wide text-[#4C9A2A]">Founder</p>
+          <p className="mt-3 text-sm leading-relaxed text-[#0E3B2E]/65">
+            Gourav oversees how the platform runs, from scheduling to keeping our process aligned
+            with Oklahoma&apos;s telehealth and medical marijuana regulations.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

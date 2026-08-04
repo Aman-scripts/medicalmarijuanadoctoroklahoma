@@ -15,12 +15,15 @@ export function ContactHero() {
           </div>
 
           <h1 className="mt-6 font-heading text-4xl leading-[1.1] font-medium tracking-tight text-[#0E3B2E] sm:text-5xl">
-            Get In Touch
+            Get In Touch - Medical Marijuana Doctor Oklahoma
           </h1>
 
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#0E3B2E]/70">
-            Are you ready to team up to acquire legitimate services online? Get in touch with us
-            straight away. We would love to speak about how we can help you with your journey.
+            Thinking about getting your Oklahoma Medical Marijuana card? We can help. Reach out to
+            our team and we&apos;ll walk you through how scheduling works, what to bring to your
+            visit, and what the Oklahoma Medical Marijuana Authority (OMMA) actually looks for
+            during approval. If you just have a quick question before booking, that&apos;s fine
+            too - call, email, or send us a message and someone will get back to you.
           </p>
         </div>
 

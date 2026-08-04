@@ -4,14 +4,16 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
 import { AboutHero } from "@/components/sections/about/about-hero";
 import { AboutValues } from "@/components/sections/about/about-values";
+import { AboutLeadership } from "@/components/sections/about/about-leadership";
+import { AboutHowItWorks } from "@/components/sections/about/about-how-it-works";
 import { AboutAppointment } from "@/components/sections/about/about-appointment";
 import { AboutInfo } from "@/components/sections/about/about-info";
 import { AboutCta } from "@/components/sections/about/about-cta";
 
 export const metadata: Metadata = {
-  title: "About Us | MMJ Doctor Oklahoma",
+  title: "About Us | Medical Marijuana Doctor Oklahoma",
   description:
-    "Medical Marijuana Doctor Oklahoma is a reliable brand that has excelled in serving legitimate services online for years.",
+    "Learn how Medical Marijuana Doctor Oklahoma connects patients with licensed physicians for fast, honest OMMA-compliant evaluations.",
 };
 
 export default function AboutUsPage() {
@@ -22,6 +24,8 @@ export default function AboutUsPage() {
       <main>
         <AboutHero />
         <AboutValues />
+        <AboutLeadership />
+        <AboutHowItWorks />
         <AboutAppointment />
         <AboutInfo />
         <AboutCta />

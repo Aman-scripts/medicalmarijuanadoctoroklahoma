@@ -33,6 +33,7 @@ export function WhatIsCard() {
               src="/what-is-card-section.jpg"
               alt="Patient purchasing cannabis products at a licensed Oklahoma dispensary"
               fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0E3B2E]/70 via-transparent to-transparent" />
