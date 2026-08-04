@@ -6,7 +6,7 @@ import { ContactHero } from "@/components/sections/contact/contact-hero";
 import { ContactDetails } from "@/components/sections/contact/contact-details";
 import { ContactAfterReachOut } from "@/components/sections/contact/contact-after-reach-out";
 import { ContactPrivacyNote } from "@/components/sections/contact/contact-privacy-note";
-import { ContactForm } from "@/components/sections/contact/contact-form";
+// import { ContactForm } from "@/components/sections/contact/contact-form";
 import { ContactFaq } from "@/components/sections/contact/contact-faq";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function ContactUsPage() {
         <ContactDetails />
         <ContactAfterReachOut />
         <ContactPrivacyNote />
-        <ContactForm />
+        {/* <ContactForm /> */}
         <ContactFaq />
       </main>
       <SiteFooter />
