@@ -12,7 +12,6 @@ import {
   Phone,
   ShieldCheck,
   TriangleAlert,
-  Truck,
   Video,
 } from "lucide-react";
 import { FacebookIcon } from "@/components/icons/facebook-icon";
@@ -44,7 +43,6 @@ export function SiteFooter() {
     { label: "Consent for Telehealth", href: "/consent-for-telehealth", icon: Video },
     { label: "Terms of Use", href: "/terms-of-use", icon: CheckCheck },
     { label: "Refund Policy", href: "/refund-policy", icon: HandCoins },
-    { label: "Shipping Policy", href: "/shipping-policy", icon: Truck },
     { label: "Accessibility Statement", href: "/accessibility-statement", icon: Accessibility },
     { label: "Editorial Policy", href: "/editorial-policy", icon: PenLine },
     { label: "Disclaimer", href: "/disclaimer", icon: TriangleAlert },
@@ -69,32 +67,32 @@ export function SiteFooter() {
             <a
               href="#"
               aria-label="Facebook"
-              className="flex size-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+              className="flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
             >
-              <FacebookIcon className="size-4" />
+              <FacebookIcon className="size-5" />
             </a>
             <a
               href="https://maps.app.goo.gl/8HTa3Scrh8eU3Wfi7"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Google"
-              className="flex size-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+              className="flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
             >
-              <GoogleIcon className="size-4" />
+              <GoogleIcon className="size-5" />
             </a>
             <a
               href="#"
               aria-label="Instagram"
-              className="flex size-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+              className="flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
             >
-              <InstagramIcon className="size-4" />
+              <InstagramIcon className="size-5" />
             </a>
             <a
               href="#"
               aria-label="LinkedIn"
-              className="flex size-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+              className="flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
             >
-              <LinkedinIcon className="size-4" />
+              <LinkedinIcon className="size-5" />
             </a>
           </div>
         </div>
@@ -129,13 +127,13 @@ export function SiteFooter() {
           <p className="text-xs font-semibold tracking-[0.15em] text-[#8FD66B]">CONTACT</p>
           <ul className="mt-5 space-y-4 text-sm text-white/65">
             <li className="flex items-start gap-2.5">
-              <Phone className="mt-0.5 size-4 shrink-0 text-[#8FD66B]" />
+              <Phone className="mt-0.5 size-5 shrink-0 text-[#8FD66B]" />
               <a href="tel:+14054451637" className="transition-colors hover:text-white">
                 +1 (405) 445 - 1637
               </a>
             </li>
             <li className="flex items-start gap-2.5">
-              <Mail className="mt-0.5 size-4 shrink-0 text-[#8FD66B]" />
+              <Mail className="mt-0.5 size-5 shrink-0 text-[#8FD66B]" />
               <a
                 href="mailto:info@medicalmarijuanadoctoroklahoma.com"
                 className="transition-colors hover:text-white"
@@ -144,18 +142,18 @@ export function SiteFooter() {
               </a>
             </li>
             <li className="flex items-start gap-2.5">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-[#8FD66B]" />
+              <MapPin className="mt-0.5 size-5 shrink-0 text-[#8FD66B]" />
               1036 W I-240 Service Road, Oklahoma City, OK 73139
             </li>
             <li className="flex items-start gap-2.5">
-              <Clock className="mt-0.5 size-4 shrink-0 text-[#8FD66B]" />
+              <Clock className="mt-0.5 size-5 shrink-0 text-[#8FD66B]" />
               9:00 am to 10:00 pm
             </li>
           </ul>
         </div>
 
         <div>
-          <p className="text-xs font-semibold tracking-[0.15em] text-[#8FD66B]">
+          <p className="whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-[#8FD66B]">
             LEGAL, COMPLIANCE &amp; EDITORIAL
           </p>
           <ul className="mt-5 space-y-3">
@@ -165,7 +163,7 @@ export function SiteFooter() {
                   href={href}
                   className="flex items-center gap-2.5 text-sm text-white/65 transition-colors hover:text-white"
                 >
-                  <Icon className="size-4 shrink-0 text-[#8FD66B]" />
+                  <Icon className="size-5 shrink-0 text-[#8FD66B]" />
                   {label}
                 </Link>
               </li>
