@@ -17,7 +17,7 @@ export function ContactForm() {
           <h2 className="font-heading text-2xl font-medium text-[#0E3B2E] sm:text-3xl">
             Get In Touch
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-[#0E3B2E]/60">
+          <p className="mt-3 text-sm leading-relaxed text-[#0E3B2E]/80">
             Got a question before booking? Send it over and someone from our team will follow
             up, usually within a business day. If it&apos;s something time-sensitive, calling{" "}
             <a href="tel:+14054451637" className="font-medium text-[#0E3B2E] underline underline-offset-2">

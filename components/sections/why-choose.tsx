@@ -17,11 +17,11 @@ export function WhyChoose() {
     <section id="about" className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">WHY CHOOSE US</p>
+          <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">WHY CHOOSE US</p>
           <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:whitespace-nowrap sm:text-4xl">
             Why Choose MMJ Doctor Oklahoma?
           </h2>
-          <p className="mt-4 text-[#0E3B2E]/60">
+          <p className="mt-4 text-[#0E3B2E]/80">
             The fastest, most secure way to get your medical marijuana card in Oklahoma.
           </p>
         </div>
@@ -33,7 +33,7 @@ export function WhyChoose() {
                 <Icon className="size-5" />
               </div>
               <h3 className="mt-5 text-base font-semibold text-[#0E3B2E]">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-[#0E3B2E]/60">{description}</p>
+              <p className="mt-2 text-sm leading-relaxed text-[#0E3B2E]/80">{description}</p>
             </div>
           ))}
         </div>

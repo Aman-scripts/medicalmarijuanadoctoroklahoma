@@ -21,7 +21,7 @@ export default function AboutUsPage() {
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
       <PageBreadcrumb page="About Us" />
-      <main>
+      <main id="main-content">
         <AboutHero />
         <AboutValues />
         <AboutLeadership />

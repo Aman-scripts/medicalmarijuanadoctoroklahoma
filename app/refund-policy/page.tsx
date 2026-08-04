@@ -88,22 +88,22 @@ export default function RefundPolicyPage() {
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
       <PageBreadcrumb page="Refund Policy" />
-      <main>
+      <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
             <div className="flex flex-col items-center text-center">
-              <span className="inline-flex rounded-full border border-[#4C9A2A]/30 bg-white px-3 py-1 text-[11px] font-semibold tracking-[0.15em] text-[#4C9A2A]">
+              <span className="inline-flex rounded-full border border-[#4C9A2A]/30 bg-white px-3 py-1 text-[11px] font-semibold tracking-[0.15em] text-[#2F7A18]">
                 MONEY-BACK GUARANTEE
               </span>
               <h1 className="mt-4 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                 Refund Policy
               </h1>
-              <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/70">
+              <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 Medical Marijuana Doctor Oklahoma offers a 100% money-back guarantee, subject to the
                 eligibility conditions outlined below. This policy applies to medical marijuana
                 evaluation services provided through our platform.
               </p>
-              <p className="mx-auto mt-3 max-w-3xl leading-relaxed text-[#0E3B2E]/70">
+              <p className="mx-auto mt-3 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 Please review this policy carefully before scheduling your evaluation.
               </p>
             </div>
@@ -114,12 +114,12 @@ export default function RefundPolicyPage() {
                   key={section.heading}
                   className={`flex gap-5 py-8 ${index !== sections.length - 1 ? "border-b border-black/5" : ""}`}
                 >
-                  <span className="shrink-0 font-heading text-lg font-medium text-[#4C9A2A]/50">
+                  <span className="shrink-0 font-heading text-lg font-medium text-[#2F7A18]">
                     {pad(index)}
                   </span>
                   <div className="min-w-0">
                     <h2 className="text-base font-semibold text-[#0E3B2E]">{section.heading}</h2>
-                    <div className="mt-2.5 space-y-2.5 text-sm leading-relaxed text-[#0E3B2E]/70">
+                    <div className="mt-2.5 space-y-2.5 text-sm leading-relaxed text-[#0E3B2E]/85">
                       {section.body?.map((paragraph, i) => (
                         <p key={i}>{paragraph}</p>
                       ))}
@@ -166,7 +166,7 @@ export default function RefundPolicyPage() {
                 className="flex items-center justify-between rounded-2xl border border-black/5 bg-white p-6 transition-colors hover:bg-black/[0.02]"
               >
                 <div>
-                  <p className="text-[10px] font-semibold tracking-[0.15em] text-[#0E3B2E]/40">
+                  <p className="text-[10px] font-semibold tracking-[0.15em] text-[#0E3B2E]/75">
                     NEXT DOCUMENT
                   </p>
                   <p className="mt-1 font-heading text-lg font-medium text-[#0E3B2E]">

@@ -9,7 +9,7 @@ export function ContactHero() {
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
         <div>
-          <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">
+          <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">
             <span className="h-px w-8 bg-[#4C9A2A]/40" />
             CONTACT US
           </div>
@@ -18,7 +18,7 @@ export function ContactHero() {
             Get In Touch - Medical Marijuana Doctor Oklahoma
           </h1>
 
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#0E3B2E]/70">
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#0E3B2E]/85">
             Thinking about getting your Oklahoma Medical Marijuana card? We can help. Reach out to
             our team and we&apos;ll walk you through how scheduling works, what to bring to your
             visit, and what the Oklahoma Medical Marijuana Authority (OMMA) actually looks for

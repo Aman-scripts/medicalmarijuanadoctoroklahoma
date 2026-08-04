@@ -25,7 +25,7 @@ export function SiteHeader() {
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.png" alt="Medical Marijuana Doctor Oklahoma" width={220} height={56} className="h-14 w-auto" style={{ width: "auto" }} priority />
         </Link>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-[#0E3B2E]/70 md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-[#0E3B2E]/85 md:flex">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="transition-colors hover:text-[#0E3B2E]">
               {link.label}

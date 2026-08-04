@@ -59,7 +59,7 @@ export function SiteFooter() {
             height={50}
             className="h-11 w-auto brightness-0 invert"
           />
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
+          <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/80">
             Oklahoma&apos;s most trusted platform for medical marijuana card approvals. Licensed
             doctors, instant approval, legal protection.
           </p>
@@ -98,11 +98,11 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold tracking-[0.15em] text-[#8FD66B]">QUICK LINKS</p>
+          <p className="text-xs font-semibold tracking-[0.15em] text-[#B8E89A]">QUICK LINKS</p>
           <ul className="mt-5 space-y-3">
             {quickLinks.map((link) => (
               <li key={link}>
-                <a href="#" className="text-sm text-white/65 transition-colors hover:text-white">
+                <a href="#" className="text-sm text-white/80 transition-colors hover:text-white">
                   {link}
                 </a>
               </li>
@@ -111,11 +111,11 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold tracking-[0.15em] text-[#8FD66B]">RESOURCES</p>
+          <p className="text-xs font-semibold tracking-[0.15em] text-[#B8E89A]">RESOURCES</p>
           <ul className="mt-5 space-y-3">
             {resources.map((link) => (
               <li key={link.label}>
-                <Link href={link.href} className="text-sm text-white/65 transition-colors hover:text-white">
+                <Link href={link.href} className="text-sm text-white/80 transition-colors hover:text-white">
                   {link.label}
                 </Link>
               </li>
@@ -124,16 +124,16 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold tracking-[0.15em] text-[#8FD66B]">CONTACT</p>
-          <ul className="mt-5 space-y-4 text-sm text-white/65">
+          <p className="text-xs font-semibold tracking-[0.15em] text-[#B8E89A]">CONTACT</p>
+          <ul className="mt-5 space-y-4 text-sm text-white/80">
             <li className="flex items-start gap-2.5">
-              <Phone className="mt-0.5 size-5 shrink-0 text-[#8FD66B]" />
+              <Phone className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" />
               <a href="tel:+14054451637" className="transition-colors hover:text-white">
                 +1 (405) 445 - 1637
               </a>
             </li>
             <li className="flex items-start gap-2.5">
-              <Mail className="mt-0.5 size-5 shrink-0 text-[#8FD66B]" />
+              <Mail className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" />
               <a
                 href="mailto:info@medicalmarijuanadoctoroklahoma.com"
                 className="transition-colors hover:text-white"
@@ -142,18 +142,18 @@ export function SiteFooter() {
               </a>
             </li>
             <li className="flex items-start gap-2.5">
-              <MapPin className="mt-0.5 size-5 shrink-0 text-[#8FD66B]" />
+              <MapPin className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" />
               1036 W I-240 Service Road, Oklahoma City, OK 73139
             </li>
             <li className="flex items-start gap-2.5">
-              <Clock className="mt-0.5 size-5 shrink-0 text-[#8FD66B]" />
+              <Clock className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" />
               9:00 am to 10:00 pm
             </li>
           </ul>
         </div>
 
         <div>
-          <p className="whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-[#8FD66B]">
+          <p className="whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-[#B8E89A]">
             LEGAL, COMPLIANCE &amp; EDITORIAL
           </p>
           <ul className="mt-5 space-y-3">
@@ -161,9 +161,9 @@ export function SiteFooter() {
               <li key={label}>
                 <Link
                   href={href}
-                  className="flex items-center gap-2.5 text-sm text-white/65 transition-colors hover:text-white"
+                  className="flex items-center gap-2.5 text-sm text-white/80 transition-colors hover:text-white"
                 >
-                  <Icon className="size-5 shrink-0 text-[#8FD66B]" />
+                  <Icon className="size-5 shrink-0 text-[#B8E89A]" />
                   {label}
                 </Link>
               </li>
@@ -174,12 +174,12 @@ export function SiteFooter() {
 
       <div className="mx-auto mt-14 max-w-6xl border-t border-white/10 pt-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="text-xs text-white/45">
+          <p className="text-xs text-white/75">
             © {new Date().getFullYear()} Medical Marijuana Doctor Oklahoma. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             {trustBadges.map((badge) => (
-              <span key={badge} className="text-[11px] font-medium tracking-wide text-white/35">
+              <span key={badge} className="text-[11px] font-medium tracking-wide text-white/85">
                 {badge}
               </span>
             ))}

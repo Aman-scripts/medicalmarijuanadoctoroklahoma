@@ -29,7 +29,7 @@ export function DoctorsSchedule() {
         <h2 className="font-heading text-3xl font-medium tracking-tight text-white sm:text-4xl">
           Schedule Your Appointment with Licensed Doctors Today
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-white/65">
+        <p className="mx-auto mt-4 max-w-xl text-white/80">
           Receive expert evaluations and OMMA-compliant MMJ recommendations from experienced
           professionals, all online and hassle-free.
         </p>
@@ -55,11 +55,11 @@ export function DoctorsSchedule() {
               href={href}
               className="flex flex-col items-center gap-2 rounded-2xl border border-white/10 bg-white/5 p-6 text-center transition-colors hover:bg-white/10"
             >
-              <div className="flex size-11 items-center justify-center rounded-full bg-[#8FD66B]/15 text-[#8FD66B]">
+              <div className="flex size-11 items-center justify-center rounded-full bg-[#8FD66B]/15 text-[#B8E89A]">
                 <Icon className="size-5" />
               </div>
               <p className="mt-2 text-sm font-semibold text-white">{title}</p>
-              <p className="text-xs leading-relaxed text-white/60">{description}</p>
+              <p className="text-xs leading-relaxed text-white/80">{description}</p>
             </a>
           ))}
         </div>

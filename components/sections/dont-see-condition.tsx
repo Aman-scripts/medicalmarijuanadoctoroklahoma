@@ -8,7 +8,7 @@ export function DontSeeCondition() {
         <h2 className="font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
           Don&apos;t See Your Condition Listed?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-[#0E3B2E]/60">
+        <p className="mx-auto mt-4 max-w-xl text-[#0E3B2E]/80">
         Oklahoma law allows doctors to recommend medical marijuana for any condition they believe could benefit from treatment. Our licensed physicians will evaluate your specific case during consultation.
         </p>
         <Button

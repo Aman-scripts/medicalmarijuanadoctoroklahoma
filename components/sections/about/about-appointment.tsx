@@ -15,7 +15,7 @@ export function AboutAppointment() {
           <h2 className="font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
             Get Your Appointment
           </h2>
-          <p className="mx-auto mt-4 max-w-xs text-[#0E3B2E]/60">
+          <p className="mx-auto mt-4 max-w-xs text-[#0E3B2E]/80">
             Obtain your card to get your appointment with our health physicians within few
             minutes.
           </p>

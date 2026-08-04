@@ -18,11 +18,11 @@ export function WhatIsCard() {
     <section id="apply" className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">GET STARTED</p>
+          <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">GET STARTED</p>
           <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:whitespace-nowrap sm:text-4xl">
             What is An Oklahoma Medical Marijuana Card?
           </h2>
-          <p className="mt-4 text-[#0E3B2E]/60">
+          <p className="mt-4 text-[#0E3B2E]/80">
           A Medical Marijuana Card in Oklahoma gives you legal protection and access to cannabis for therapeutic purposes. With your card, you can legally consume, possess, and cultivate medical marijuana as recommended by licensed physicians
           </p>
         </div>
@@ -54,7 +54,7 @@ export function WhatIsCard() {
                   <Icon className="size-4.5" />
                 </div>
                 <h3 className="mt-4 text-sm font-semibold text-[#0E3B2E]">{title}</h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-[#0E3B2E]/60">{description}</p>
+                <p className="mt-1.5 text-xs leading-relaxed text-[#0E3B2E]/80">{description}</p>
               </div>
             ))}
           </div>
@@ -63,7 +63,7 @@ export function WhatIsCard() {
         <div className="mt-12 flex justify-center">
           <div className="flex flex-col items-center gap-5 rounded-[2rem] bg-[#0E3B2E] px-10 py-10 text-center sm:flex-row sm:gap-8 sm:text-left">
             <div>
-              <p className="text-xs font-semibold tracking-wide text-[#8FD66B]">ONE-TIME FEE</p>
+              <p className="text-xs font-semibold tracking-wide text-[#B8E89A]">ONE-TIME FEE</p>
               <p className="font-heading text-4xl font-medium text-white">$149</p>
             </div>
             <Button

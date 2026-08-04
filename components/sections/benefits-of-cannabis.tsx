@@ -30,11 +30,11 @@ export function BenefitsOfCannabis() {
     <section className="bg-[#0E3B2E] px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-[#8FD66B]">HEALTH &amp; WELLNESS</p>
+          <p className="text-xs font-semibold tracking-[0.2em] text-[#B8E89A]">HEALTH &amp; WELLNESS</p>
           <h2 className="mt-3 font-heading text-4xl font-medium tracking-tight text-white">
             Benefits of Medical Cannabis
           </h2>
-          <p className="mt-4 text-white/60">
+          <p className="mt-4 text-white/80">
             Discover how medical marijuana can improve your quality of life with natural,
             effective treatment.
           </p>
@@ -44,11 +44,11 @@ export function BenefitsOfCannabis() {
           <div className="grid gap-5 sm:grid-cols-2 lg:col-span-7">
             {benefits.map(({ icon: Icon, title, description }) => (
               <div key={title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <div className="flex size-11 items-center justify-center rounded-xl bg-[#8FD66B]/15 text-[#8FD66B]">
+                <div className="flex size-11 items-center justify-center rounded-xl bg-[#8FD66B]/15 text-[#B8E89A]">
                   <Icon className="size-5" />
                 </div>
                 <h3 className="mt-5 text-base font-semibold text-white">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/60">{description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/80">{description}</p>
               </div>
             ))}
           </div>
@@ -74,8 +74,8 @@ export function BenefitsOfCannabis() {
         </div>
 
         <div className="mt-12 flex flex-col items-center gap-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/70">
-            <Star className="size-4 text-[#8FD66B]" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/85">
+            <Star className="size-4 text-[#B8E89A]" />
             98% Customer Satisfaction - Helping patients manage their conditions
           </div>
           <Button

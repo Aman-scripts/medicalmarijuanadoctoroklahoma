@@ -10,7 +10,7 @@ export function AboutHowItWorks() {
     <section className="bg-[#EAF1EA] px-6 py-24">
       <div className="mx-auto max-w-3xl">
         <div className="text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">HOW IT WORKS</p>
+          <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">HOW IT WORKS</p>
           <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
             How the Process Works
           </h2>
@@ -25,7 +25,7 @@ export function AboutHowItWorks() {
               <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#0E3B2E] text-sm font-semibold text-white">
                 {index + 1}
               </span>
-              <p className="text-sm leading-relaxed text-[#0E3B2E]/70 sm:text-base">{step}</p>
+              <p className="text-sm leading-relaxed text-[#0E3B2E]/85 sm:text-base">{step}</p>
             </li>
           ))}
         </ol>

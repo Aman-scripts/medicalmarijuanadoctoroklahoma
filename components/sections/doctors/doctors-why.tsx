@@ -39,11 +39,11 @@ export function DoctorsWhy() {
     <section className="bg-[#EAF1EA] px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">WHY OUR DOCTORS</p>
+          <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">WHY OUR DOCTORS</p>
           <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
             Why Our Doctors Are the Right Choice
           </h2>
-          <p className="mt-4 text-[#0E3B2E]/60">
+          <p className="mt-4 text-[#0E3B2E]/80">
             Oklahoma patients deserve physicians who know the state&apos;s rules cold &mdash; and
             treat a cannabis evaluation like real medical care.
           </p>
@@ -56,7 +56,7 @@ export function DoctorsWhy() {
                 <Icon className="size-5" />
               </div>
               <h3 className="mt-5 text-base font-semibold text-[#0E3B2E]">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-[#0E3B2E]/60">{description}</p>
+              <p className="mt-2 text-sm leading-relaxed text-[#0E3B2E]/80">{description}</p>
             </div>
           ))}
         </div>
@@ -67,7 +67,7 @@ export function DoctorsWhy() {
               <h3 className="font-heading text-2xl font-medium text-white sm:text-3xl">
                 Start Your Journey to Relief Today
               </h3>
-              <p className="mx-auto mt-2 max-w-md text-sm text-white/65">
+              <p className="mx-auto mt-2 max-w-md text-sm text-white/80">
                 Get evaluated and approved by taking an online consultation today and receive an
                 MMJ recommendation from our expert medical professional.
               </p>

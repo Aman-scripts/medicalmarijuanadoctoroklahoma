@@ -60,7 +60,7 @@ function ReviewCard({
           </div>
           <div>
             <p className="flex items-center gap-1 text-sm font-semibold text-[#0E3B2E]">{review.name}</p>
-            <p className="text-xs text-[#0E3B2E]/45">{review.time}</p>
+            <p className="text-xs text-[#0E3B2E]/75">{review.time}</p>
           </div>
         </div>
         <GoogleIcon className="size-5 shrink-0" />
@@ -86,7 +86,7 @@ function ReviewCard({
           type="button"
           variant="ghost"
           onClick={onToggle}
-          className="mt-1 h-auto self-start p-0 text-xs font-medium text-[#0E3B2E]/40 hover:bg-transparent hover:text-[#0E3B2E]/60"
+          className="mt-1 h-auto self-start p-0 text-xs font-medium text-[#0E3B2E]/75 hover:bg-transparent hover:text-[#0E3B2E]/80"
         >
           {expanded ? "Show less" : "Read more"}
         </Button>
@@ -104,11 +104,11 @@ export function Testimonials() {
   return (
     <section className="bg-[#EAF1EA] px-6 py-24">
       <div className="mx-auto max-w-6xl text-center">
-        <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">TESTIMONIALS</p>
+        <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">TESTIMONIALS</p>
         <h2 className="mt-3 font-heading text-4xl font-medium tracking-tight text-[#0E3B2E]">
           What Our Patients Say
         </h2>
-        <p className="mt-4 text-[#0E3B2E]/60">
+        <p className="mt-4 text-[#0E3B2E]/80">
           Real testimonials from Oklahoma patients who found relief through our platform.
         </p>
 

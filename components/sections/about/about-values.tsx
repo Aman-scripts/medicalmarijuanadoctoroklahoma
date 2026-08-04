@@ -15,11 +15,11 @@ export function AboutValues() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold tracking-[0.2em] text-[#8FD66B]">WHY WE STARTED THIS</p>
+          <p className="text-xs font-semibold tracking-[0.2em] text-[#B8E89A]">WHY WE STARTED THIS</p>
           <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-white sm:text-4xl">
             Why We Built This for Oklahoma
           </h2>
-          <p className="mt-4 text-white/70">
+          <p className="mt-4 text-white/85">
             Oklahoma has one of the most active medical marijuana programs in the country, but
             the process can still feel confusing on a first try. Between OMMA&apos;s requirements
             and knowing which conditions qualify, a lot of patients get stuck before they even

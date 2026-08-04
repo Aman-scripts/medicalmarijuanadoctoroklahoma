@@ -252,36 +252,36 @@ export default function TermsOfUsePage() {
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
       <PageBreadcrumb page="Terms of Use" />
-      <main>
+      <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
             <div className="flex flex-col items-center text-center">
-              <span className="inline-flex rounded-full border border-[#4C9A2A]/30 bg-white px-3 py-1 text-[11px] font-semibold tracking-[0.15em] text-[#4C9A2A]">
+              <span className="inline-flex rounded-full border border-[#4C9A2A]/30 bg-white px-3 py-1 text-[11px] font-semibold tracking-[0.15em] text-[#2F7A18]">
                 LEGAL TERMS
               </span>
               <h1 className="mt-4 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                 Terms of Use
               </h1>
-              <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/70">
+              <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 Please carefully review these Terms of Use before accessing or using the Medical
                 Marijuana Doctor Oklahoma website or services. These terms contain important
                 information regarding your legal rights, disclaimers of warranties, and limitations
                 of liability.
               </p>
-              <p className="mx-auto mt-3 max-w-3xl leading-relaxed text-[#0E3B2E]/70">
+              <p className="mx-auto mt-3 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 By accessing, browsing, registering for, or using this website or any services
                 provided through the platform, you acknowledge that you have read, understood, and
                 agree to be legally bound by these Terms of Use, our Privacy Policy, and any other
                 policies referenced herein.
               </p>
-              <p className="mx-auto mt-3 max-w-3xl leading-relaxed text-[#0E3B2E]/70">
+              <p className="mx-auto mt-3 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 Medical Marijuana Doctor Oklahoma operates as a technology platform that facilitates
                 access to independent licensed physicians for medical marijuana evaluations where
                 permitted by applicable state law. Medical Marijuana Doctor Oklahoma does not
                 provide medical advice, diagnosis, or treatment and does not guarantee that any
                 individual will receive a medical marijuana recommendation.
               </p>
-              <p className="mx-auto mt-3 max-w-3xl leading-relaxed text-[#0E3B2E]/70">
+              <p className="mx-auto mt-3 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 Your continued use of the website following any modifications to these Terms
                 constitutes your acceptance of those changes.
               </p>
@@ -293,12 +293,12 @@ export default function TermsOfUsePage() {
                   key={section.heading}
                   className={`flex gap-5 py-8 ${index !== sections.length - 1 ? "border-b border-black/5" : ""}`}
                 >
-                  <span className="shrink-0 font-heading text-lg font-medium text-[#4C9A2A]/50">
+                  <span className="shrink-0 font-heading text-lg font-medium text-[#2F7A18]">
                     {pad(index)}
                   </span>
                   <div className="min-w-0">
                     <h2 className="text-base font-semibold text-[#0E3B2E]">{section.heading}</h2>
-                    <div className="mt-2.5 space-y-2.5 text-sm leading-relaxed text-[#0E3B2E]/70">
+                    <div className="mt-2.5 space-y-2.5 text-sm leading-relaxed text-[#0E3B2E]/85">
                       {section.body?.map((paragraph, i) => (
                         <p key={i}>{renderWithLinks(paragraph, section.links)}</p>
                       ))}
@@ -340,7 +340,7 @@ export default function TermsOfUsePage() {
                 className="flex items-center justify-between rounded-2xl border border-black/5 bg-white p-6 transition-colors hover:bg-black/[0.02]"
               >
                 <div>
-                  <p className="text-[10px] font-semibold tracking-[0.15em] text-[#0E3B2E]/40">
+                  <p className="text-[10px] font-semibold tracking-[0.15em] text-[#0E3B2E]/75">
                     NEXT DOCUMENT
                   </p>
                   <p className="mt-1 font-heading text-lg font-medium text-[#0E3B2E]">

@@ -17,7 +17,7 @@ export function AboutInfo() {
     <section className="px-6 py-24">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">WHAT WE DO (AND DON&apos;T)</p>
+          <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">WHAT WE DO (AND DON&apos;T)</p>
           <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
             What We Do - and What We Don&apos;t
           </h2>
@@ -29,8 +29,8 @@ export function AboutInfo() {
             <ul className="mt-4 flex flex-col gap-3">
               {included.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <Check className="mt-0.5 size-4 shrink-0 text-[#4C9A2A]" />
-                  <span className="text-sm leading-relaxed text-[#0E3B2E]/70">{item}</span>
+                  <Check className="mt-0.5 size-4 shrink-0 text-[#2F7A18]" />
+                  <span className="text-sm leading-relaxed text-[#0E3B2E]/85">{item}</span>
                 </li>
               ))}
             </ul>
@@ -41,8 +41,8 @@ export function AboutInfo() {
             <ul className="mt-4 flex flex-col gap-3">
               {excluded.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <X className="mt-0.5 size-4 shrink-0 text-[#0E3B2E]/40" />
-                  <span className="text-sm leading-relaxed text-[#0E3B2E]/70">{item}</span>
+                  <X className="mt-0.5 size-4 shrink-0 text-[#0E3B2E]/75" />
+                  <span className="text-sm leading-relaxed text-[#0E3B2E]/85">{item}</span>
                 </li>
               ))}
             </ul>

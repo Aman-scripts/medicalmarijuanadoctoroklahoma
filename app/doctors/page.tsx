@@ -20,7 +20,7 @@ export default function DoctorsPage() {
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
       <PageBreadcrumb page="Our Doctors" />
-      <main>
+      <main id="main-content">
         <DoctorsHero />
         <DoctorsTeam />
         <DoctorsWhy />

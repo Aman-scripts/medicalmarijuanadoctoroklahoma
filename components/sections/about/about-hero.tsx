@@ -15,7 +15,7 @@ export function AboutHero() {
             About Medical Marijuana Doctor Oklahoma
           </h1>
 
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#0E3B2E]/70">
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#0E3B2E]/85">
             Medical Marijuana Doctor Oklahoma connects Oklahoma patients with state-licensed
             physicians for medical marijuana evaluations, entirely by telehealth. We built this
             site specifically for Oklahoma, because the state&apos;s application process through

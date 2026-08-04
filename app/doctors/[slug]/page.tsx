@@ -43,12 +43,12 @@ export default async function DoctorProfilePage({ params }: Props) {
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
       <PageBreadcrumb page={doctor.name} />
-      <main>
+      <main id="main-content">
         <section className="px-6 pt-14 pb-16 sm:pt-20">
           <div className="mx-auto max-w-5xl">
             <Link
               href="/doctors"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-[#0E3B2E]/60 hover:text-[#0E3B2E]"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-[#0E3B2E]/80 hover:text-[#0E3B2E]"
             >
               <ArrowLeft className="size-4" /> Back to all doctors
             </Link>
@@ -66,20 +66,20 @@ export default async function DoctorProfilePage({ params }: Props) {
               </div>
 
               <div>
-                <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">
+                <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">
                   {doctor.category.toUpperCase()}
                 </p>
                 <h1 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                   Dr. {doctor.name}, {doctor.credentials}
                 </h1>
-                <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-[#0E3B2E]/60">
+                <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-[#0E3B2E]/80">
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-[#0E3B2E]/10 bg-white px-3 py-1.5">
-                    <BadgeCheck className="size-4 text-[#4C9A2A]" /> Licensed in Oklahoma
+                    <BadgeCheck className="size-4 text-[#2F7A18]" /> Licensed in Oklahoma
                   </span>
                   <span>Experience: {doctor.experience}</span>
                 </div>
 
-                <p className="mt-6 leading-relaxed text-[#0E3B2E]/70">{doctor.about}</p>
+                <p className="mt-6 leading-relaxed text-[#0E3B2E]/85">{doctor.about}</p>
 
                 <div className="mt-8">
                   <h2 className="text-sm font-semibold tracking-wide text-[#0E3B2E]">

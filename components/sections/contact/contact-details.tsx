@@ -28,11 +28,11 @@ export function ContactDetails() {
   return (
     <section className="bg-[#EAF1EA] px-6 py-20">
       <div className="mx-auto max-w-4xl text-center">
-        <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">GET IN TOUCH</p>
+        <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">GET IN TOUCH</p>
         <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
           Reach Us
         </h2>
-        <p className="mt-4 text-sm leading-relaxed text-[#0E3B2E]/60 sm:text-base">
+        <p className="mt-4 text-sm leading-relaxed text-[#0E3B2E]/80 sm:text-base">
           Reaching out about anything medical can feel a little awkward, so we try to keep this
           part easy. Call us, email us, or come by our Oklahoma City office - whatever works for
           you. A real staff member responds, not an automated system. Here&apos;s a quick rundown
@@ -48,12 +48,12 @@ export function ContactDetails() {
               href={href}
               className="flex min-w-0 items-start gap-4 rounded-2xl border border-black/5 bg-white p-6 text-left shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#0E3B2E]/5 text-[#4C9A2A]">
+              <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#0E3B2E]/5 text-[#2F7A18]">
                 <Icon className="size-5" />
               </div>
               <div className="min-w-0">
                 <p className="text-sm font-semibold text-[#0E3B2E]">{label}</p>
-                <p className="mt-1 text-sm leading-relaxed break-words text-[#0E3B2E]/60">{value}</p>
+                <p className="mt-1 text-sm leading-relaxed break-words text-[#0E3B2E]/80">{value}</p>
                 <p className="mt-2 text-xs leading-relaxed text-[#0E3B2E]/50">{note}</p>
               </div>
             </a>

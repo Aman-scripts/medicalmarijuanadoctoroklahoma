@@ -10,7 +10,7 @@ export function FaqHero() {
           Medical Marijuana FAQ
         </h1>
 
-        <p className="mt-6 text-lg leading-relaxed text-[#0E3B2E]/70">
+        <p className="mt-6 text-lg leading-relaxed text-[#0E3B2E]/85">
           You can get answer to your query here.
         </p>
       </div>

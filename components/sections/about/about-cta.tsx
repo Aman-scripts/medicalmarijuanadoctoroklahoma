@@ -8,7 +8,7 @@ export function AboutCta() {
         <h2 className="font-heading text-2xl font-medium text-white sm:text-3xl">
           Ready to Get Started?
         </h2>
-        <p className="mx-auto mt-4 max-w-lg text-white/65">
+        <p className="mx-auto mt-4 max-w-lg text-white/80">
           If you think you might qualify for a medical marijuana card in Oklahoma, the first step
           is a quick evaluation with one of our licensed physicians. It takes about 15-30
           minutes, start to finish.

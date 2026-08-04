@@ -124,7 +124,7 @@ export function FaqList() {
               value={index}
               className="overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm"
             >
-              <AccordionTrigger className="px-6 py-5 text-sm font-semibold text-[#0E3B2E] hover:no-underline sm:text-base [&_svg]:text-[#4C9A2A]">
+              <AccordionTrigger className="px-6 py-5 text-sm font-semibold text-[#0E3B2E] hover:no-underline sm:text-base [&_svg]:text-[#2F7A18]">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="px-6 text-sm leading-relaxed text-[#0E3B2E]/65">

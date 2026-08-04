@@ -32,11 +32,11 @@ export function DoctorsProcess() {
     <section className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-xl text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-[#4C9A2A]">THE PROCESS</p>
+          <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">THE PROCESS</p>
           <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
             How Our Doctors Evaluate Patients
           </h2>
-          <p className="mt-4 text-[#0E3B2E]/60">
+          <p className="mt-4 text-[#0E3B2E]/80">
             Four steps, one appointment. Here&apos;s exactly what happens between booking and
             your OMMA submission.
           </p>
@@ -53,10 +53,10 @@ export function DoctorsProcess() {
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <Icon className="size-4 text-[#4C9A2A]" />
+                  <Icon className="size-4 text-[#2F7A18]" />
                   <h3 className="text-base font-semibold text-[#0E3B2E]">{title}</h3>
                 </div>
-                <p className="mt-2 text-sm leading-relaxed text-[#0E3B2E]/60">{description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-[#0E3B2E]/80">{description}</p>
               </div>
             </div>
           ))}

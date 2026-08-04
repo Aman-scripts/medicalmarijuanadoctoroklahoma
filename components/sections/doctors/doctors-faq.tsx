@@ -68,7 +68,7 @@ export function DoctorsFaq() {
           <h2 className="font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-[#0E3B2E]/60">
+          <p className="mt-4 text-[#0E3B2E]/80">
             Everything patients ask before their first Oklahoma evaluation.
           </p>
         </div>
@@ -80,7 +80,7 @@ export function DoctorsFaq() {
               value={index}
               className="overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm"
             >
-              <AccordionTrigger className="px-6 py-5 text-sm font-semibold text-[#0E3B2E] hover:no-underline sm:text-base [&_svg]:text-[#4C9A2A]">
+              <AccordionTrigger className="px-6 py-5 text-sm font-semibold text-[#0E3B2E] hover:no-underline sm:text-base [&_svg]:text-[#2F7A18]">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="px-6 text-sm leading-relaxed text-[#0E3B2E]/65">

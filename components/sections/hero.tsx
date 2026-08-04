@@ -24,10 +24,10 @@ export function Hero() {
         <div>
           <h1 className="font-heading text-4xl leading-[1.1] font-medium tracking-tight text-[#0E3B2E] sm:text-5xl">
             Get Approved by an Oklahoma Medical Marijuana Doctor and Receive Your{" "}
-            <span className="italic text-[#4C9A2A]">Digital Card in Minutes!</span>
+            <span className="italic text-[#2F7A18]">Digital Card in Minutes!</span>
           </h1>
 
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#0E3B2E]/70">
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#0E3B2E]/85">
             Easy online application, instant approval, and same-day access to legal cannabis in
             Oklahoma.
           </p>
@@ -52,9 +52,9 @@ export function Hero() {
             {badges.map(({ icon: Icon, label }) => (
               <div
                 key={label}
-                className="flex items-center gap-1.5 rounded-full border border-[#0E3B2E]/10 bg-white px-3.5 py-2 text-xs font-medium text-[#0E3B2E]/70"
+                className="flex items-center gap-1.5 rounded-full border border-[#0E3B2E]/10 bg-white px-3.5 py-2 text-xs font-medium text-[#0E3B2E]/85"
               >
-                <Icon className="size-3.5 text-[#4C9A2A]" />
+                <Icon className="size-3.5 text-[#2F7A18]" />
                 {label}
               </div>
             ))}

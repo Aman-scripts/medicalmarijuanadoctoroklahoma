@@ -16,7 +16,7 @@ export default function FaqPage() {
     <div className="flex flex-col bg-[#F6F5F0]">
       <SiteHeader />
       <PageBreadcrumb page="FAQ" />
-      <main>
+      <main id="main-content">
         <FaqHero />
         <FaqList />
       </main>
