@@ -24,7 +24,7 @@ export default function AboutUsPage() {
       <main id="main-content">
         <AboutHero />
         <AboutValues />
-        <AboutLeadership />
+        {/* <AboutLeadership /> */}
         <AboutHowItWorks />
         <AboutAppointment />
         <AboutInfo />
