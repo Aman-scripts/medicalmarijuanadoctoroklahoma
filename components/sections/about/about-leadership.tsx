@@ -1,4 +1,4 @@
-import { User } from "lucide-react";
+import Image from "next/image";
 
 export function AboutLeadership() {
   return (
@@ -12,8 +12,14 @@ export function AboutLeadership() {
 
       <div className="mx-auto mt-12 max-w-sm">
         <div className="flex flex-col items-center rounded-2xl border border-black/5 bg-white p-8 text-center shadow-sm">
-          <div className="flex size-20 items-center justify-center rounded-full bg-[#EAF1EA] text-[#0E3B2E]/75">
-            <User className="size-9" />
+          <div className="relative size-48 overflow-hidden rounded-full bg-[#EAF1EA] ring-4 ring-[#EAF1EA]">
+            <Image
+              src="/gaurav.webp"
+              alt="Gourav Sharma"
+              fill
+              sizes="192px"
+              className="object-cover"
+            />
           </div>
           <h3 className="mt-5 font-heading text-lg font-medium text-[#0E3B2E]">Gourav Sharma</h3>
           <p className="mt-1 text-xs font-semibold tracking-wide text-[#2F7A18]">Founder</p>
