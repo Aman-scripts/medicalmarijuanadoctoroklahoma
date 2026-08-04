@@ -17,7 +17,7 @@ export function AboutLeadership() {
           </div>
           <h3 className="mt-5 font-heading text-lg font-medium text-[#0E3B2E]">Gourav Sharma</h3>
           <p className="mt-1 text-xs font-semibold tracking-wide text-[#2F7A18]">Founder</p>
-          <p className="mt-3 text-sm leading-relaxed text-[#0E3B2E]/65">
+          <p className="mt-3 text-sm leading-relaxed text-[#0E3B2E]/85">
             Gourav oversees how the platform runs, from scheduling to keeping our process aligned
             with Oklahoma&apos;s telehealth and medical marijuana regulations.
           </p>

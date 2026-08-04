@@ -20,13 +20,6 @@ import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 
 export function SiteFooter() {
-  const quickLinks = [
-    "What is OK MMJ Card",
-    "Qualifying Conditions",
-    "Process for MMJ",
-    "Why Choose Us",
-    "Patient's Reviews",
-  ];
   const resources = [
     { label: "About Us", href: "/about-us" },
     { label: "Contact Us", href: "/contact-us" },
@@ -50,7 +43,7 @@ export function SiteFooter() {
 
   return (
     <footer id="contact" className="bg-[#0E3B2E] px-6 pt-20 pb-10">
-      <div className="mx-auto grid max-w-6xl gap-12 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.85fr_0.85fr_0.95fr_1fr]">
+      <div className="mx-auto grid max-w-6xl gap-12 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.85fr_0.95fr_1fr]">
         <div>
           <Image
             src="/logo.png"
@@ -95,19 +88,6 @@ export function SiteFooter() {
               <LinkedinIcon className="size-5" />
             </a>
           </div>
-        </div>
-
-        <div>
-          <p className="text-xs font-semibold tracking-[0.15em] text-[#B8E89A]">QUICK LINKS</p>
-          <ul className="mt-5 space-y-3">
-            {quickLinks.map((link) => (
-              <li key={link}>
-                <a href="#" className="text-sm text-white/80 transition-colors hover:text-white">
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
 
         <div>

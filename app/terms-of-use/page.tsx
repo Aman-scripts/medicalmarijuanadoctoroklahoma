@@ -309,19 +309,19 @@ export default function TermsOfUsePage() {
                         <p key={`after-${i}`}>{paragraph}</p>
                       ))}
                       {section.contact ? (
-                        <ul className="space-y-1.5">
+                        <ul className="space-y-3">
                           {section.contact.map((item) => (
-                            <li key={item.label} className="flex flex-wrap gap-x-2">
-                              <span className="font-semibold text-[#0E3B2E]">{item.label}:</span>
+                            <li key={item.label}>
+                              <p className="font-semibold text-[#0E3B2E]">{item.label}:</p>
                               {item.href ? (
                                 <a
                                   href={item.href}
-                                  className="font-medium text-[#0E3B2E] underline underline-offset-2"
+                                  className="mt-0.5 block max-w-full break-all font-medium text-[#0E3B2E] underline underline-offset-2"
                                 >
                                   {item.value}
                                 </a>
                               ) : (
-                                <span>{item.value}</span>
+                                <p className="mt-0.5 max-w-full break-words">{item.value}</p>
                               )}
                             </li>
                           ))}

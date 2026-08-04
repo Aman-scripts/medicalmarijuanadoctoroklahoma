@@ -54,7 +54,7 @@ export function ContactDetails() {
               <div className="min-w-0">
                 <p className="text-sm font-semibold text-[#0E3B2E]">{label}</p>
                 <p className="mt-1 text-sm leading-relaxed break-words text-[#0E3B2E]/80">{value}</p>
-                <p className="mt-2 text-xs leading-relaxed text-[#0E3B2E]/50">{note}</p>
+                <p className="mt-2 text-xs leading-relaxed text-[#0E3B2E]/85">{note}</p>
               </div>
             </a>
           ))}

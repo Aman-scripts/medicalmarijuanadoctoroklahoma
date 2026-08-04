@@ -43,7 +43,7 @@ export function DoctorsSchedule() {
           </Button>
         </div>
 
-        <p className="mt-5 text-xs tracking-wide text-white/50">
+        <p className="mt-5 text-xs tracking-wide text-white/85">
           Complete the process in 15-30 minutes &middot; 100% online &middot; No office visits
           required
         </p>

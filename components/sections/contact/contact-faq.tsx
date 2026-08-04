@@ -51,7 +51,7 @@ export function ContactFaq() {
               <AccordionTrigger className="px-6 py-5 text-sm font-semibold text-[#0E3B2E] hover:no-underline sm:text-base [&_svg]:text-[#2F7A18]">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="px-6 text-sm leading-relaxed text-[#0E3B2E]/65">
+              <AccordionContent className="px-6 text-sm leading-relaxed text-[#0E3B2E]/85">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

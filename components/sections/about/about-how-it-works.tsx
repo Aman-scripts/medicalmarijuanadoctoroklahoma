@@ -30,7 +30,7 @@ export function AboutHowItWorks() {
           ))}
         </ol>
 
-        <p className="mt-8 text-center text-sm leading-relaxed text-[#0E3B2E]/55">
+        <p className="mt-8 text-center text-sm leading-relaxed text-[#0E3B2E]/85">
           Physicians on our platform make their own independent decisions. We don&apos;t
           guarantee approvals, and no one at Medical Marijuana Doctor Oklahoma influences that
           judgment.
