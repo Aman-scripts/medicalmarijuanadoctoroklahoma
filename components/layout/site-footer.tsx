@@ -115,10 +115,10 @@ export function SiteFooter() {
             <li className="flex items-start gap-2.5">
               <Mail className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" />
               <a
-                href="mailto:info@medicalmarijuanadoctoroklahoma.com"
+                href="mailto:contact@medicalmarijuanadoctoroklahoma.com"
                 className="transition-colors hover:text-white"
               >
-                info@medicalmarijuanadoctoroklahoma.com
+                contact@medicalmarijuanadoctoroklahoma.com
               </a>
             </li>
             <li className="flex items-start gap-2.5">

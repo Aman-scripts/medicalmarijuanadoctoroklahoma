@@ -62,13 +62,14 @@ export function ContactDetails() {
 
         <div className="overflow-hidden rounded-3xl border border-black/5 shadow-sm">
           <iframe
-            title="Medical Marijuana Doctor Oklahoma location"
-            src="https://www.google.com/maps?q=1036+W+I-240+Service+Road,+Oklahoma+City,+OK+73139&output=embed"
+            title="Medical Marijuana Doctor Oklahoma location on Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.584812969321!2d-97.5349792!3d35.3907522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b2130117034245%3A0x5b18753d5447eeac!2sRedbud!5e0!3m2!1sen!2sin!4v1785902062532!5m2!1sen!2sin"
             width="100%"
-            height="400"
+            height="450"
+            allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="block h-[320px] w-full lg:h-full lg:min-h-[420px]"
+            referrerPolicy="strict-origin-when-cross-origin"
+            className="block h-[320px] w-full border-0 lg:h-full lg:min-h-[450px]"
           />
         </div>
       </div>
