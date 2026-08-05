@@ -15,10 +15,8 @@ import {
 const navLinks = [
   { href: "/about-us/", label: "About Us" },
   { href: "/doctors/", label: "Our Doctors" },
-  { href: "/reviews/", label: "Reviews" },
   { href: "/contact-us/", label: "Contact Us" },
   { href: "/faq/", label: "FAQ" },
-  { href: "/legal/", label: "Legal Policies" },
 ];
 
 export function SiteHeader() {
