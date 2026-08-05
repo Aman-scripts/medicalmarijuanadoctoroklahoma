@@ -4,27 +4,24 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
 import { AboutHero } from "@/components/sections/about/about-hero";
 import { AboutValues } from "@/components/sections/about/about-values";
-import { AboutLeadership } from "@/components/sections/about/about-leadership";
 import { AboutHowItWorks } from "@/components/sections/about/about-how-it-works";
 import { AboutAppointment } from "@/components/sections/about/about-appointment";
 import { AboutInfo } from "@/components/sections/about/about-info";
 import { AboutCta } from "@/components/sections/about/about-cta";
+import { JsonLd } from "@/components/seo/json-ld";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Us | Medical Marijuana Doctor Oklahoma",
-  description:
-    "Learn how Medical Marijuana Doctor Oklahoma connects patients with licensed physicians for fast, honest OMMA-compliant evaluations.",
-};
+export const metadata: Metadata = buildMetadata(pages.about);
 
 export default function AboutUsPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.about)} />
       <SiteHeader />
-      <PageBreadcrumb page="About Us" />
+      <PageBreadcrumb page="About Us" currentPath={pages.about.path} />
       <main id="main-content">
         <AboutHero />
         <AboutValues />
-        {/* <AboutLeadership /> */}
         <AboutHowItWorks />
         <AboutAppointment />
         <AboutInfo />

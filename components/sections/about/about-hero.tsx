@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/booking-dialog";
 
 export function AboutHero() {
   return (
@@ -24,12 +24,11 @@ export function AboutHero() {
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
-            <Button
-              render={<a href="#contact" />}
+            <BookingButton
               className="h-auto gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
             >
               Apply Now <ArrowRight className="size-4" />
-            </Button>
+            </BookingButton>
           </div>
         </div>
 

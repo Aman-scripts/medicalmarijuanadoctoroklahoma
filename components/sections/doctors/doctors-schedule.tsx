@@ -1,5 +1,5 @@
 import { ArrowRight, Mail, MessageCircle, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/booking-dialog";
 
 export function DoctorsSchedule() {
   const options = [
@@ -19,7 +19,7 @@ export function DoctorsSchedule() {
       icon: MessageCircle,
       title: "Live Chat",
       description: "Connect with our support anytime.",
-      href: "/contact-us",
+      href: "/contact-us/",
     },
   ];
 
@@ -35,12 +35,11 @@ export function DoctorsSchedule() {
         </p>
 
         <div className="mt-8 flex justify-center">
-          <Button
-            render={<a href="#apply" />}
+          <BookingButton
             className="h-auto gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
           >
             Get Your MMJ Card Today <ArrowRight className="size-4" />
-          </Button>
+          </BookingButton>
         </div>
 
         <p className="mt-5 text-xs tracking-wide text-white/85">

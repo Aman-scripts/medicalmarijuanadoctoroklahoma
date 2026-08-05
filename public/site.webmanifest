@@ -1,6 +1,7 @@
 {
   "name": "Medical Marijuana Doctor Oklahoma",
   "short_name": "MMJ Doctor OK",
+  "start_url": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

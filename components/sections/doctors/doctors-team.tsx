@@ -69,7 +69,7 @@ export function DoctorsTeam() {
                 <p className="mt-1 text-xs text-[#0E3B2E]/85">Experience: {doctor.experience}</p>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-[#0E3B2E]/85">{doctor.bio}</p>
                 <Button
-                  render={<Link href={`/doctors/${doctor.slug}`} />}
+                  render={<Link href={`/doctors/${doctor.slug}/`} />}
                   className="mt-5 h-auto w-full gap-2 rounded-full bg-[#0E3B2E] px-5 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
                 >
                   View Profile <ArrowRight className="size-4" />

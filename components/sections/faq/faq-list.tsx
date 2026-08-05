@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqs = [
+export const faqs = [
   {
     question:
       "What if I need some help for the purchasing and consumption of Medical Marijuana?",

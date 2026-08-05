@@ -4,12 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
+import { JsonLd } from "@/components/seo/json-ld";
+import { PageDates } from "@/components/seo/page-dates";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Medical Marijuana Doctor Oklahoma",
-  description:
-    "See how Medical Marijuana Doctor Oklahoma collects, uses, and protects your personal and health information during medical marijuana evaluations.",
-};
+export const metadata: Metadata = buildMetadata(pages.privacy);
 
 type Section = {
   heading: string;
@@ -179,8 +178,9 @@ function BulletList({ items }: { items: string[] }) {
 export default function PrivacyPolicyPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.privacy)} />
       <SiteHeader />
-      <PageBreadcrumb page="Privacy Policy" />
+      <PageBreadcrumb page="Privacy Policy" currentPath={pages.privacy.path} />
       <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
@@ -191,6 +191,7 @@ export default function PrivacyPolicyPage() {
               <h1 className="mt-4 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                 Privacy Policy
               </h1>
+              <PageDates page={pages.privacy} />
               <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 Medical Marijuana Doctor Oklahoma (&quot;Medical Marijuana Doctor Oklahoma,&quot;
                 &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your
@@ -264,7 +265,7 @@ export default function PrivacyPolicyPage() {
 
             <div className="mt-4">
               <Link
-                href="/hipaa-compliance"
+                href="/hipaa-compliance/"
                 className="flex items-center justify-between rounded-2xl border border-black/5 bg-white p-6 transition-colors hover:bg-black/[0.02]"
               >
                 <div>

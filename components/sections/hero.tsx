@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, Lock, ShieldCheck, Star, ZapIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/booking-dialog";
 
 export function Hero() {
   const badges = [
@@ -33,12 +34,11 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-nowrap items-center gap-3 sm:gap-4">
-            <Button
-              render={<a href="#apply" />}
+            <BookingButton
               className="h-auto flex-1 gap-1.5 whitespace-nowrap rounded-full bg-[#0E3B2E] px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90 sm:flex-none sm:gap-2 sm:px-7 sm:py-4"
             >
               Get Started <ArrowRight className="size-4" />
-            </Button>
+            </BookingButton>
             <Button
               variant="outline"
               render={<a href="#conditions" />}

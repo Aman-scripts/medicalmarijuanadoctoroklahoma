@@ -4,12 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
+import { JsonLd } from "@/components/seo/json-ld";
+import { PageDates } from "@/components/seo/page-dates";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Accessibility Statement | Medical Marijuana Doctor OK",
-  description:
-    "Medical Marijuana Doctor Oklahoma is committed to WCAG 2.1 accessibility standards so all patients can use our telehealth services with ease.",
-};
+export const metadata: Metadata = buildMetadata(pages.accessibility);
 
 type LinkRef = { text: string; href: string };
 
@@ -83,9 +82,9 @@ const sections: Section[] = [
       "Accessibility is part of our broader commitment to protecting patient rights, maintaining transparency, and providing secure telehealth services. To learn more about how we protect your information and govern the use of our platform, please review the following pages:",
     ],
     policyLinks: [
-      { text: "Privacy Policy", href: "/privacy-policy" },
-      { text: "Terms of Use", href: "/terms-of-use" },
-      { text: "HIPAA Compliance Policy", href: "/hipaa-compliance" },
+      { text: "Privacy Policy", href: "/privacy-policy/" },
+      { text: "Terms of Use", href: "/terms-of-use/" },
+      { text: "HIPAA Compliance Policy", href: "/hipaa-compliance/" },
     ],
     note: "These policies outline how we handle patient data, maintain secure communications, and ensure responsible use of our telehealth services.",
   },
@@ -104,8 +103,9 @@ function pad(index: number) {
 export default function AccessibilityStatementPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.accessibility)} />
       <SiteHeader />
-      <PageBreadcrumb page="Accessibility Statement" />
+      <PageBreadcrumb page="Accessibility Statement" currentPath={pages.accessibility.path} />
       <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
@@ -116,6 +116,7 @@ export default function AccessibilityStatementPage() {
               <h1 className="mt-4 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                 Accessibility Statement
               </h1>
+              <PageDates page={pages.accessibility} />
               <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 At Medical Marijuana Doctor Oklahoma, we are committed to ensuring that our website
                 and telehealth services are accessible to all users, including individuals with
@@ -177,7 +178,7 @@ export default function AccessibilityStatementPage() {
 
             <div className="mt-4">
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 className="flex items-center justify-between rounded-2xl border border-black/5 bg-white p-6 transition-colors hover:bg-black/[0.02]"
               >
                 <div>

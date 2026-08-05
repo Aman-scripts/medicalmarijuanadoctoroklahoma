@@ -4,12 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
+import { JsonLd } from "@/components/seo/json-ld";
+import { PageDates } from "@/components/seo/page-dates";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Refund Policy | Medical Marijuana Doctor Oklahoma",
-  description:
-    "Learn when you qualify for a full refund on your Oklahoma medical marijuana evaluation, plus our missed appointment and refund process.",
-};
+export const metadata: Metadata = buildMetadata(pages.refund);
 
 type Section = {
   heading: string;
@@ -86,8 +85,9 @@ function pad(index: number) {
 export default function RefundPolicyPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.refund)} />
       <SiteHeader />
-      <PageBreadcrumb page="Refund Policy" />
+      <PageBreadcrumb page="Refund Policy" currentPath={pages.refund.path} />
       <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
@@ -98,6 +98,7 @@ export default function RefundPolicyPage() {
               <h1 className="mt-4 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                 Refund Policy
               </h1>
+              <PageDates page={pages.refund} />
               <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 Medical Marijuana Doctor Oklahoma offers a 100% money-back guarantee, subject to the
                 eligibility conditions outlined below. This policy applies to medical marijuana
@@ -162,7 +163,7 @@ export default function RefundPolicyPage() {
 
             <div className="mt-4">
               <Link
-                href="/terms-of-use"
+                href="/terms-of-use/"
                 className="flex items-center justify-between rounded-2xl border border-black/5 bg-white p-6 transition-colors hover:bg-black/[0.02]"
               >
                 <div>

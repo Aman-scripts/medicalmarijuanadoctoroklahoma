@@ -1,5 +1,5 @@
 import { ArrowRight, BadgeCheck, Clock3, ShieldCheck, Star, Stethoscope, Video } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/booking-dialog";
 
 export function DoctorsWhy() {
   const reasons = [
@@ -72,12 +72,11 @@ export function DoctorsWhy() {
                 MMJ recommendation from our expert medical professional.
               </p>
             </div>
-            <Button
-              render={<a href="#apply" />}
+            <BookingButton
               className="h-auto gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
             >
               Book Your Consultation Today <ArrowRight className="size-4" />
-            </Button>
+            </BookingButton>
           </div>
         </div>
       </div>

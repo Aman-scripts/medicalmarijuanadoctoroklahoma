@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Hero } from "@/components/sections/hero";
@@ -8,10 +9,15 @@ import { QualifyingConditions } from "@/components/sections/qualifying-condition
 import { DontSeeCondition } from "@/components/sections/dont-see-condition";
 import { BenefitsOfCannabis } from "@/components/sections/benefits-of-cannabis";
 import { Testimonials } from "@/components/sections/testimonials";
+import { JsonLd } from "@/components/seo/json-ld";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata(pages.home);
 
 export default function Home() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.home)} />
       <SiteHeader />
       <main id="main-content">
         <Hero />

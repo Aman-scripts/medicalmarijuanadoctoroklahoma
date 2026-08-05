@@ -5,12 +5,11 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
+import { JsonLd } from "@/components/seo/json-ld";
+import { PageDates } from "@/components/seo/page-dates";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms of Use | Medical Marijuana Doctor Oklahoma",
-  description:
-    "Read the Terms of Use for Medical Marijuana Doctor Oklahoma, covering eligibility, telehealth consent, physician relationships, and liability.",
-};
+export const metadata: Metadata = buildMetadata(pages.terms);
 
 type LinkRef = { text: string; href: string };
 
@@ -85,7 +84,7 @@ const sections: Section[] = [
       "Your use of the website and services is also governed by our Privacy Policy, which describes how we collect, use, disclose, and safeguard your personal information, including information submitted during medical evaluations. All personal health information is collected, transmitted, and stored in compliance with HIPAA privacy and security standards.",
     ],
     note: "By accessing or using the website, you acknowledge that you have read and agree to the terms of our Privacy Policy.",
-    links: [{ text: "Privacy Policy", href: "/privacy-policy" }],
+    links: [{ text: "Privacy Policy", href: "/privacy-policy/" }],
   },
   {
     heading: "Federal Law and Regulatory Disclosure",
@@ -127,7 +126,7 @@ const sections: Section[] = [
       "Refund eligibility is subject to specific conditions, including but not limited to physician eligibility determinations and service delivery timelines.",
     ],
     note: "Complete details regarding refunds, eligibility criteria, and procedures are set forth in our Refund Policy.",
-    links: [{ text: "Refund Policy", href: "/refund-policy" }],
+    links: [{ text: "Refund Policy", href: "/refund-policy/" }],
   },
   {
     heading: "Limitation of Liability",
@@ -250,8 +249,9 @@ function BulletList({ items }: { items: string[] }) {
 export default function TermsOfUsePage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.terms)} />
       <SiteHeader />
-      <PageBreadcrumb page="Terms of Use" />
+      <PageBreadcrumb page="Terms of Use" currentPath={pages.terms.path} />
       <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
@@ -262,6 +262,7 @@ export default function TermsOfUsePage() {
               <h1 className="mt-4 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                 Terms of Use
               </h1>
+              <PageDates page={pages.terms} />
               <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 Please carefully review these Terms of Use before accessing or using the Medical
                 Marijuana Doctor Oklahoma website or services. These terms contain important
@@ -336,7 +337,7 @@ export default function TermsOfUsePage() {
 
             <div className="mt-4">
               <Link
-                href="/privacy-policy"
+                href="/privacy-policy/"
                 className="flex items-center justify-between rounded-2xl border border-black/5 bg-white p-6 transition-colors hover:bg-black/[0.02]"
               >
                 <div>

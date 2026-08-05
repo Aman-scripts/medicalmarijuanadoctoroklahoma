@@ -6,26 +6,23 @@ import { ContactHero } from "@/components/sections/contact/contact-hero";
 import { ContactDetails } from "@/components/sections/contact/contact-details";
 import { ContactAfterReachOut } from "@/components/sections/contact/contact-after-reach-out";
 import { ContactPrivacyNote } from "@/components/sections/contact/contact-privacy-note";
-// import { ContactForm } from "@/components/sections/contact/contact-form";
 import { ContactFaq } from "@/components/sections/contact/contact-faq";
+import { JsonLd } from "@/components/seo/json-ld";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact Us | Medical Marijuana Doctor Oklahoma",
-  description:
-    "Have questions about your Oklahoma MMJ card? Contact Medical Marijuana Doctor Oklahoma by phone, email, or in person. We respond fast.",
-};
+export const metadata: Metadata = buildMetadata(pages.contact);
 
 export default function ContactUsPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.contact)} />
       <SiteHeader />
-      <PageBreadcrumb page="Contact Us" />
+      <PageBreadcrumb page="Contact Us" currentPath={pages.contact.path} />
       <main id="main-content">
         <ContactHero />
         <ContactDetails />
         <ContactAfterReachOut />
         <ContactPrivacyNote />
-        {/* <ContactForm /> */}
         <ContactFaq />
       </main>
       <SiteFooter />

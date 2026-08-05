@@ -21,9 +21,9 @@ import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 
 export function SiteFooter() {
   const resources = [
-    { label: "About Us", href: "/about-us" },
-    { label: "Contact Us", href: "/contact-us" },
-    { label: "FAQs", href: "/faq" },
+    { label: "About Us", href: "/about-us/" },
+    { label: "Contact Us", href: "/contact-us/" },
+    { label: "FAQs", href: "/faq/" },
   ];
   const trustBadges = [
     "HIPAA Compliant Practice",
@@ -31,18 +31,18 @@ export function SiteFooter() {
     "State Authorized Evaluators",
   ];
   const legalLinks = [
-    { label: "Privacy Policy", href: "/privacy-policy", icon: EyeOff },
-    { label: "HIPAA Compliance", href: "/hipaa-compliance", icon: ShieldCheck },
-    { label: "Consent for Telehealth", href: "/consent-for-telehealth", icon: Video },
-    { label: "Terms of Use", href: "/terms-of-use", icon: CheckCheck },
-    { label: "Refund Policy", href: "/refund-policy", icon: HandCoins },
-    { label: "Accessibility Statement", href: "/accessibility-statement", icon: Accessibility },
-    { label: "Editorial Policy", href: "/editorial-policy", icon: PenLine },
-    { label: "Disclaimer", href: "/disclaimer", icon: TriangleAlert },
+    { label: "Privacy Policy", href: "/privacy-policy/", icon: EyeOff },
+    { label: "HIPAA Compliance", href: "/hipaa-compliance/", icon: ShieldCheck },
+    { label: "Consent for Telehealth", href: "/consent-for-telehealth/", icon: Video },
+    { label: "Terms of Use", href: "/terms-of-use/", icon: CheckCheck },
+    { label: "Refund Policy", href: "/refund-policy/", icon: HandCoins },
+    { label: "Accessibility Statement", href: "/accessibility-statement/", icon: Accessibility },
+    { label: "Editorial Policy", href: "/editorial-policy/", icon: PenLine },
+    { label: "Disclaimer", href: "/disclaimer/", icon: TriangleAlert },
   ];
 
   return (
-    <footer id="contact" className="bg-[#0E3B2E] px-6 pt-20 pb-10">
+    <footer id="contact" className="bg-[#0E3B2E] px-6 pt-20 pb-10" aria-label="Site footer">
       <div className="mx-auto grid max-w-6xl gap-12 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.85fr_0.95fr_1fr]">
         <div>
           <Image
@@ -56,7 +56,7 @@ export function SiteFooter() {
             Oklahoma&apos;s most trusted platform for medical marijuana card approvals. Licensed
             doctors, instant approval, legal protection.
           </p>
-          <div className="mt-6 flex items-center gap-3">
+          <div className="mt-6 flex items-center gap-3" aria-label="Social media">
             <a
               href="#"
               aria-label="Facebook"
@@ -90,7 +90,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div>
+        <nav aria-label="Resources">
           <p className="text-xs font-semibold tracking-[0.15em] text-[#B8E89A]">RESOURCES</p>
           <ul className="mt-5 space-y-3">
             {resources.map((link) => (
@@ -101,19 +101,19 @@ export function SiteFooter() {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
-        <div>
+        <div aria-label="Contact information">
           <p className="text-xs font-semibold tracking-[0.15em] text-[#B8E89A]">CONTACT</p>
           <ul className="mt-5 space-y-4 text-sm text-white/80">
             <li className="flex items-start gap-2.5">
-              <Phone className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" />
+              <Phone className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" aria-hidden="true" />
               <a href="tel:+14054451637" className="transition-colors hover:text-white">
                 +1 (405) 445 - 1637
               </a>
             </li>
             <li className="flex items-start gap-2.5">
-              <Mail className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" />
+              <Mail className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" aria-hidden="true" />
               <a
                 href="mailto:contact@medicalmarijuanadoctoroklahoma.com"
                 className="transition-colors hover:text-white"
@@ -122,17 +122,17 @@ export function SiteFooter() {
               </a>
             </li>
             <li className="flex items-start gap-2.5">
-              <MapPin className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" />
+              <MapPin className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" aria-hidden="true" />
               1036 W I-240 Service Road, Oklahoma City, OK 73139
             </li>
             <li className="flex items-start gap-2.5">
-              <Clock className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" />
+              <Clock className="mt-0.5 size-5 shrink-0 text-[#B8E89A]" aria-hidden="true" />
               9:00 am to 10:00 pm
             </li>
           </ul>
         </div>
 
-        <div>
+        <nav aria-label="Legal, compliance, and editorial">
           <p className="whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-[#B8E89A]">
             LEGAL, COMPLIANCE &amp; EDITORIAL
           </p>
@@ -143,13 +143,13 @@ export function SiteFooter() {
                   href={href}
                   className="flex items-center gap-2.5 text-sm text-white/80 transition-colors hover:text-white"
                 >
-                  <Icon className="size-5 shrink-0 text-[#B8E89A]" />
+                  <Icon className="size-5 shrink-0 text-[#B8E89A]" aria-hidden="true" />
                   {label}
                 </Link>
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
       </div>
 
       <div className="mx-auto mt-14 max-w-6xl border-t border-white/10 pt-8">

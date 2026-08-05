@@ -4,12 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
+import { JsonLd } from "@/components/seo/json-ld";
+import { PageDates } from "@/components/seo/page-dates";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Editorial Policy | Medical Marijuana Doctor Oklahoma",
-  description:
-    "See how Medical Marijuana Doctor Oklahoma ensures accurate, fact-checked medical marijuana content for Oklahoma patients and caregivers.",
-};
+export const metadata: Metadata = buildMetadata(pages.editorial);
 
 type Section = {
   heading: string;
@@ -74,8 +73,9 @@ function pad(index: number) {
 export default function EditorialPolicyPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.editorial)} />
       <SiteHeader />
-      <PageBreadcrumb page="Editorial Policy" />
+      <PageBreadcrumb page="Editorial Policy" currentPath={pages.editorial.path} />
       <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
@@ -86,6 +86,7 @@ export default function EditorialPolicyPage() {
               <h1 className="mt-4 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                 Editorial Policy
               </h1>
+              <PageDates page={pages.editorial} />
               <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 At Medical Marijuana Doctor Oklahoma, we are committed to delivering accurate,
                 reliable, and practical information about medical marijuana in Oklahoma, cannabis
@@ -139,7 +140,7 @@ export default function EditorialPolicyPage() {
 
             <div className="mt-4">
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 className="flex items-center justify-between rounded-2xl border border-black/5 bg-white p-6 transition-colors hover:bg-black/[0.02]"
               >
                 <div>

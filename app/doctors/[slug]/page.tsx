@@ -22,6 +22,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { doctors, getDoctorBySlug } from "@/lib/doctors";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  SITE_NAME,
+  SITE_URL,
+  absoluteUrl,
+  doctorMetadata,
+  withTrailingSlash,
+} from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -36,13 +44,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const doctor = getDoctorBySlug(slug);
 
   if (!doctor) {
-    return { title: "Doctor Not Found | MMJ Doctor Oklahoma" };
+    return { title: "Doctor Not Found" };
   }
 
-  return {
-    title: `Dr. ${doctor.name}, ${doctor.credentials} | MMJ Doctor Oklahoma`,
-    description: doctor.bio,
-  };
+  return doctorMetadata({
+    slug: doctor.slug,
+    name: doctor.name,
+    credentials: doctor.credentials,
+    bio: doctor.bio,
+    image: doctor.image,
+  });
 }
 
 export default async function DoctorProfilePage({ params }: Props) {
@@ -54,19 +65,43 @@ export default async function DoctorProfilePage({ params }: Props) {
   }
 
   const lastName = doctor.name.split(" ").slice(-1)[0];
+  const profilePath = withTrailingSlash(`/doctors/${doctor.slug}`);
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    name: `Dr. ${doctor.name}, ${doctor.credentials}`,
+    description: doctor.bio,
+    image: absoluteUrl(doctor.image),
+    url: absoluteUrl(profilePath),
+    medicalSpecialty: doctor.category,
+    worksFor: {
+      "@type": "MedicalBusiness",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    areaServed: {
+      "@type": "State",
+      name: "Oklahoma",
+    },
+  };
 
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={physicianSchema} />
       <SiteHeader />
-      <PageBreadcrumb page={doctor.name} />
+      <PageBreadcrumb
+        page={doctor.name}
+        currentPath={profilePath}
+        items={[{ label: "Our Doctors", href: "/doctors/" }]}
+      />
       <main id="main-content">
         <section className="px-6 pt-14 pb-16 sm:pt-20">
           <div className="mx-auto max-w-5xl">
             <Link
-              href="/doctors"
+              href="/doctors/"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-[#0E3B2E]/80 hover:text-[#0E3B2E]"
             >
-              <ArrowLeft className="size-4" /> Back to all doctors
+              <ArrowLeft className="size-4" aria-hidden="true" /> Back to all doctors
             </Link>
 
             {/* Hero */}
@@ -325,7 +360,7 @@ export default async function DoctorProfilePage({ params }: Props) {
                   Book a Consultation <ArrowRight className="size-4" />
                 </Button>
                 <Link
-                  href="/doctors"
+                  href="/doctors/"
                   className="text-sm font-medium text-[#0E3B2E]/70 underline underline-offset-4 hover:text-[#0E3B2E]"
                 >
                   Meet the rest of our team

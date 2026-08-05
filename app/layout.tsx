@@ -1,7 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  DEFAULT_OG_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  organizationSchema,
+  pages,
+} from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -17,9 +25,59 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MMJ Doctor Oklahoma | Get Your Medical Marijuana Card",
-  description:
-    "Oklahoma's most professional path to wellness. 100% online telemedicine evaluations or in-person visits at our OKC clinical facility.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: pages.home.title,
+    absolute: pages.home.title,
+  },
+  description: pages.home.description,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  keywords: [
+    "Oklahoma medical marijuana doctor",
+    "MMJ card Oklahoma",
+    "medical marijuana evaluation",
+    "OMMA card",
+    "telehealth cannabis doctor Oklahoma",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: pages.home.title,
+    description: pages.home.description,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 512,
+        height: 512,
+        alt: SITE_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pages.home.title,
+    description: pages.home.description,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -29,6 +87,14 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/site.webmanifest",
+  category: "health",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0E3B2E",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -48,7 +114,8 @@ export default function RootLayout({
         fraunces.variable
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col">
+        <JsonLd data={organizationSchema()} />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-[#0E3B2E] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"

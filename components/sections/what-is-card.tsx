@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, BadgeCheck, Home as HomeIcon, Leaf, MapPin, Repeat, ShieldCheck, Sprout, Stethoscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/booking-dialog";
 
 export function WhatIsCard() {
   const benefits = [
@@ -66,12 +67,11 @@ export function WhatIsCard() {
               <p className="text-xs font-semibold tracking-wide text-[#B8E89A]">ONE-TIME FEE</p>
               <p className="font-heading text-4xl font-medium text-white">$149</p>
             </div>
-            <Button
-              render={<a href="#contact" />}
+            <BookingButton
               className="h-auto gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
             >
               Apply Your Card at $149 <ArrowRight className="size-4" />
-            </Button>
+            </BookingButton>
           </div>
         </div>
       </div>

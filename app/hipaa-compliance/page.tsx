@@ -5,12 +5,11 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
+import { JsonLd } from "@/components/seo/json-ld";
+import { PageDates } from "@/components/seo/page-dates";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "HIPAA Compliance & Privacy | Medical Marijuana Doctor OK",
-  description:
-    "See how Medical Marijuana Doctor Oklahoma protects patient health information and maintains HIPAA compliance during telehealth evaluations.",
-};
+export const metadata: Metadata = buildMetadata(pages.hipaa);
 
 type LinkRef = { text: string; href: string };
 
@@ -134,8 +133,8 @@ const sections: Section[] = [
     ],
     note: "This HIPAA Compliance Notice should be read together with our Privacy Policy and Terms of Use, which provide additional information regarding how personal data is collected, used, and disclosed.",
     links: [
-      { text: "Privacy Policy", href: "/privacy-policy" },
-      { text: "Terms of Use", href: "/terms-of-use" },
+      { text: "Privacy Policy", href: "/privacy-policy/" },
+      { text: "Terms of Use", href: "/terms-of-use/" },
     ],
   },
   {
@@ -200,8 +199,9 @@ function renderWithLinks(text: string, links?: LinkRef[]): ReactNode {
 export default function HipaaCompliancePage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.hipaa)} />
       <SiteHeader />
-      <PageBreadcrumb page="HIPAA Compliance" />
+      <PageBreadcrumb page="HIPAA Compliance" currentPath={pages.hipaa.path} />
       <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
@@ -212,6 +212,7 @@ export default function HipaaCompliancePage() {
               <h1 className="mt-4 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                 HIPAA Compliance and Health Information Privacy
               </h1>
+              <PageDates page={pages.hipaa} />
               <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 Medical Marijuana Doctor Oklahoma is committed to protecting the privacy and
                 security of patient health information. As a telehealth platform that connects
@@ -280,7 +281,7 @@ export default function HipaaCompliancePage() {
 
             <div className="mt-4">
               <Link
-                href="/consent-for-telehealth"
+                href="/consent-for-telehealth/"
                 className="flex items-center justify-between rounded-2xl border border-black/5 bg-white p-6 transition-colors hover:bg-black/[0.02]"
               >
                 <div>

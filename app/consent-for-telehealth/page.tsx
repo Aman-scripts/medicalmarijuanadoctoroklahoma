@@ -4,12 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
+import { JsonLd } from "@/components/seo/json-ld";
+import { PageDates } from "@/components/seo/page-dates";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Consent to Telehealth | Medical Marijuana Doctor OK",
-  description:
-    "Read our Consent to Telehealth policy to understand how telehealth evaluations work with Medical Marijuana Doctor Oklahoma physicians.",
-};
+export const metadata: Metadata = buildMetadata(pages.telehealth);
 
 type Section = {
   heading: string;
@@ -33,7 +32,7 @@ const sections: Section[] = [
       "Digital transmission of medical information and records",
     ],
     note: "Medical Marijuana Doctor Oklahoma operates a technology platform that helps connect patients with independent, Oklahoma-licensed physicians for medical marijuana evaluations, where permitted by state law. Additional information about the platform and our services can be found in our Terms of Use.",
-    links: [{ text: "Terms of Use", href: "/terms-of-use" }],
+    links: [{ text: "Terms of Use", href: "/terms-of-use/" }],
   },
   {
     heading: "Nature of Telehealth Consultations",
@@ -89,7 +88,7 @@ const sections: Section[] = [
       "While reasonable safeguards are used to protect your information, electronic communications may carry inherent risks, including technical failures and unauthorized access.",
     ],
     note: "Information about how your personal data is handled can be found in our Privacy Policy.",
-    links: [{ text: "Privacy Policy", href: "/privacy-policy" }],
+    links: [{ text: "Privacy Policy", href: "/privacy-policy/" }],
   },
   {
     heading: "Privacy and Compliance",
@@ -97,7 +96,7 @@ const sections: Section[] = [
       "Medical Marijuana Doctor Oklahoma is committed to protecting the privacy and security of patient health information. Telehealth consultations and related medical communications are handled in accordance with healthcare privacy standards, including the Health Insurance Portability and Accountability Act (HIPAA).",
     ],
     note: "For more information about how we protect patient health information, please review our HIPAA Compliance Policy.",
-    links: [{ text: "HIPAA Compliance Policy", href: "/hipaa-compliance" }],
+    links: [{ text: "HIPAA Compliance Policy", href: "/hipaa-compliance/" }],
   },
   {
     heading: "Voluntary Consent",
@@ -113,7 +112,7 @@ const sections: Section[] = [
   {
     heading: "Questions",
     note: "If you have any questions about this Consent to Telehealth or the telehealth services offered through Medical Marijuana Doctor Oklahoma, please contact us through the information on our Contact Us page.",
-    links: [{ text: "Contact Us", href: "/contact-us" }],
+    links: [{ text: "Contact Us", href: "/contact-us/" }],
   },
 ];
 
@@ -124,8 +123,9 @@ function pad(index: number) {
 export default function ConsentForTelehealthPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.telehealth)} />
       <SiteHeader />
-      <PageBreadcrumb page="Consent for Telehealth" />
+      <PageBreadcrumb page="Consent for Telehealth" currentPath={pages.telehealth.path} />
       <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
@@ -136,6 +136,7 @@ export default function ConsentForTelehealthPage() {
               <h1 className="mt-4 font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
                 Consent to Telehealth
               </h1>
+              <PageDates page={pages.telehealth} />
               <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-[#0E3B2E]/85">
                 This Consent to Telehealth explains how telehealth services work when you use
                 Medical Marijuana Doctor Oklahoma. Telehealth allows patients to communicate with
@@ -201,7 +202,7 @@ export default function ConsentForTelehealthPage() {
 
             <div className="mt-4">
               <Link
-                href="/terms-of-use"
+                href="/terms-of-use/"
                 className="flex items-center justify-between rounded-2xl border border-black/5 bg-white p-6 transition-colors hover:bg-black/[0.02]"
               >
                 <div>

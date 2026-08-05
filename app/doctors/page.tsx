@@ -8,18 +8,17 @@ import { DoctorsWhy } from "@/components/sections/doctors/doctors-why";
 import { DoctorsProcess } from "@/components/sections/doctors/doctors-process";
 import { DoctorsFaq } from "@/components/sections/doctors/doctors-faq";
 import { DoctorsSchedule } from "@/components/sections/doctors/doctors-schedule";
+import { JsonLd } from "@/components/seo/json-ld";
+import { buildMetadata, pages, webPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Doctors | MMJ Doctor Oklahoma",
-  description:
-    "Meet the OMMA-licensed Oklahoma physicians who evaluate and certify patients for a medical marijuana card.",
-};
+export const metadata: Metadata = buildMetadata(pages.doctors);
 
 export default function DoctorsPage() {
   return (
     <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.doctors)} />
       <SiteHeader />
-      <PageBreadcrumb page="Our Doctors" />
+      <PageBreadcrumb page="Our Doctors" currentPath={pages.doctors.path} />
       <main id="main-content">
         <DoctorsHero />
         <DoctorsTeam />

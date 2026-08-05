@@ -1,5 +1,5 @@
 import { ArrowRight, BadgeCheck } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/booking-dialog";
 
 export function HowItWorks() {
   const steps = [
@@ -55,12 +55,11 @@ export function HowItWorks() {
             <BadgeCheck className="size-4 text-[#B8E89A]" />
             High Quality MMJ - State Dispensary Access
           </div>
-          <Button
-            render={<a href="#apply" />}
+          <BookingButton
             className="h-auto gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0E3B2E] shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-white/90"
           >
             Click to Start <ArrowRight className="size-4" />
-          </Button>
+          </BookingButton>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/booking-dialog";
 
 export function AboutCta() {
   return (
@@ -14,12 +14,11 @@ export function AboutCta() {
           minutes, start to finish.
         </p>
         <div className="mt-8 flex justify-center">
-          <Button
-            render={<a href="#apply" />}
+          <BookingButton
             className="h-auto gap-2 rounded-full bg-[#0E3B2E] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90"
           >
             Get Your OK MMJ Card <ArrowRight className="size-4" />
-          </Button>
+          </BookingButton>
         </div>
       </div>
     </section>

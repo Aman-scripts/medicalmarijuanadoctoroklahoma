@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/booking-dialog";
 
 export function DontSeeCondition() {
   return (
@@ -11,12 +11,11 @@ export function DontSeeCondition() {
         <p className="mx-auto mt-4 max-w-xl text-[#0E3B2E]/80">
         Oklahoma law allows doctors to recommend medical marijuana for any condition they believe could benefit from treatment. Our licensed physicians will evaluate your specific case during consultation.
         </p>
-        <Button
-          render={<a href="#contact" />}
+        <BookingButton
           className="mt-8 h-auto max-w-full gap-2 rounded-full bg-[#0E3B2E] px-5 py-3.5 text-sm font-semibold whitespace-normal text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#0E3B2E]/90 sm:px-7 sm:py-4 sm:whitespace-nowrap"
         >
           Free consultation if not approved <ArrowRight className="size-4 shrink-0" />
-        </Button>
+        </BookingButton>
       </div>
     </section>
   );
