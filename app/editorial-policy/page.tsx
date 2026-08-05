@@ -96,7 +96,14 @@ export default function EditorialPolicyPage() {
                 reliable, and practical information about medical marijuana in Oklahoma, cannabis
                 wellness, and related legal and health topics. Our editorial team ensures that all
                 content meets high standards of credibility, clarity, and usefulness for our
-                readers.
+                readers. Meet the people behind that work on our{" "}
+                <Link
+                  href={pages.contributors.path}
+                  className="font-medium text-[#0E3B2E] underline underline-offset-2"
+                >
+                  Contributors
+                </Link>{" "}
+                page.
               </p>
             </div>
 

@@ -12,6 +12,7 @@ export function SiteFooter() {
     { label: "About Us", href: "/about-us/" },
     { label: "Contact Us", href: "/contact-us/" },
     { label: "Reviews", href: "/reviews/" },
+    { label: "Contributors", href: "/contributors/" },
     { label: "FAQs", href: "/faq/" },
     { label: "Legal Policies", href: "/legal/" },
   ];

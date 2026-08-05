@@ -1,3 +1,4 @@
+import { contributors } from "@/lib/contributors";
 import { doctors } from "@/lib/doctors";
 import { absoluteUrl, pages, withTrailingSlash } from "@/lib/seo";
 
@@ -35,7 +36,14 @@ export function getSitemapEntries(): SitemapEntry[] {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...doctorEntries];
+  const contributorEntries: SitemapEntry[] = contributors.map((contributor) => ({
+    url: absoluteUrl(withTrailingSlash(`/contributors/${contributor.slug}`)),
+    lastModified: toIsoDate("2026-08-05"),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...doctorEntries, ...contributorEntries];
 }
 
 function escapeXml(value: string) {

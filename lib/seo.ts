@@ -198,6 +198,16 @@ export const pages = {
     changeFrequency: "yearly",
     priority: 0.5,
   },
+  contributors: {
+    path: "/contributors/",
+    title: "Our Medical Content Team | Medical Marijuana Doctor OK",
+    description:
+      "Meet the writer and physician reviewer behind the medical marijuana content on Medical Marijuana Doctor Oklahoma.",
+    datePublished: "2026-08-05",
+    dateModified: "2026-08-05",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
 } as const satisfies Record<string, PageSeo>;
 
 export type PageKey = keyof typeof pages;

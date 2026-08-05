@@ -1,0 +1,122 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { PageBreadcrumb } from "@/components/layout/page-breadcrumb";
+import { ContributorPortrait } from "@/components/sections/contributors/contributor-portrait";
+import { JsonLd } from "@/components/seo/json-ld";
+import { contributors } from "@/lib/contributors";
+import { buildMetadata, pages, webPageSchema, withTrailingSlash } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata(pages.contributors);
+
+export default function ContributorsPage() {
+  return (
+    <div className="flex flex-col bg-[#F6F5F0]">
+      <JsonLd data={webPageSchema(pages.contributors)} />
+      <SiteHeader />
+      <PageBreadcrumb page="Contributors" currentPath={pages.contributors.path} />
+      <main id="main-content">
+        <section className="px-6 pt-16 pb-12 sm:pt-20 sm:pb-14">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-[11px] font-semibold tracking-[0.22em] text-[#2F7A18] uppercase">
+              Contributors
+            </p>
+            <h1 className="mt-4 font-heading text-4xl font-medium tracking-tight text-[#0E3B2E] sm:text-5xl">
+              Our Medical Content Team
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl font-heading text-lg leading-relaxed text-[#0E3B2E]/80 italic sm:text-xl">
+              Every article on Medical Marijuana Doctor Oklahoma is written and reviewed by real
+              people with real credentials, not generated automatically. Here&apos;s who&apos;s
+              behind our content and why we split the writing and reviewing roles.
+            </p>
+          </div>
+        </section>
+
+        <section className="border-y border-[#0E3B2E]/10 bg-white px-6 py-14 sm:py-16">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-heading text-2xl font-medium tracking-tight text-[#0E3B2E] sm:text-3xl">
+              Why We Separate Writing and Reviewing
+            </h2>
+            <div className="mt-5 space-y-4 text-base leading-relaxed text-[#0E3B2E]/85">
+              <p>
+                We believe medical content is more trustworthy when the person writing it
+                isn&apos;t the only person checking it. Our content writer researches and drafts
+                articles in a way that&apos;s clear and useful for patients. Our medical reviewer,
+                a board-certified physician, then checks that same content for clinical accuracy
+                before it&apos;s published.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-16 sm:py-20">
+          <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
+                Meet the Team
+              </h2>
+              <div className="mx-auto mt-4 h-px w-16 bg-[#0E3B2E]/20" />
+            </div>
+
+            <div className="mt-12 grid gap-10 sm:grid-cols-2 sm:gap-8 lg:gap-12">
+              {contributors.map((person) => (
+                <article
+                  key={person.slug}
+                  className="group flex h-full flex-col items-center rounded-[2rem] border border-[#0E3B2E]/8 bg-white px-6 py-8 text-center shadow-sm"
+                >
+                  <Link
+                    href={withTrailingSlash(`/contributors/${person.slug}`)}
+                    className="block w-full max-w-sm"
+                  >
+                    <ContributorPortrait
+                      person={person}
+                      shape="circle"
+                      className="mx-auto transition-transform duration-300 group-hover:-translate-y-1"
+                    />
+                    <h3 className="mt-6 font-heading text-2xl font-medium tracking-tight text-[#0E3B2E] transition-colors group-hover:text-[#2F7A18]">
+                      {person.name}
+                      {person.credentials ? (
+                        <span className="text-[#0E3B2E]/70">, {person.credentials}</span>
+                      ) : null}
+                    </h3>
+                  </Link>
+                  <p className="mt-2 text-xs font-semibold tracking-[0.18em] text-[#2F7A18] uppercase">
+                    {person.role}
+                  </p>
+                  <p className="mt-4 max-w-sm flex-1 text-sm leading-relaxed text-[#0E3B2E]/80">
+                    {person.shortBio}
+                  </p>
+                  <Link
+                    href={withTrailingSlash(`/contributors/${person.slug}`)}
+                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#0E3B2E] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#0E3B2E]/20 transition-all hover:-translate-y-0.5 hover:bg-[#124A3A]"
+                  >
+                    {person.bioCta}
+                    <ArrowRight className="size-4 shrink-0" aria-hidden />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 pb-20">
+          <div className="mx-auto max-w-3xl border-t border-[#0E3B2E]/10 pt-10 text-center">
+            <p className="text-sm leading-relaxed text-[#0E3B2E]/75">
+              Want to know how we research and fact-check our articles?{" "}
+              <Link
+                href={pages.editorial.path}
+                className="font-semibold text-[#2F7A18] underline-offset-2 hover:underline"
+              >
+                Read our Editorial Policy
+              </Link>
+              .
+            </p>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </div>
+  );
+}
