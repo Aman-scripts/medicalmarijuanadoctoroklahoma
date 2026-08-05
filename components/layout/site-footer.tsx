@@ -1,45 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Accessibility,
-  CheckCheck,
-  Clock,
-  EyeOff,
-  HandCoins,
-  Mail,
-  MapPin,
-  PenLine,
-  Phone,
-  ShieldCheck,
-  TriangleAlert,
-  Video,
-} from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { FacebookIcon } from "@/components/icons/facebook-icon";
 import { GoogleIcon } from "@/components/icons/google-icon";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
+import { legalPages } from "@/lib/legal-pages";
 
 export function SiteFooter() {
   const resources = [
     { label: "About Us", href: "/about-us/" },
     { label: "Contact Us", href: "/contact-us/" },
     { label: "FAQs", href: "/faq/" },
+    { label: "Legal Policies", href: "/legal/" },
   ];
   const trustBadges = [
     "HIPAA Compliant Practice",
     "Board Certified Physicians",
     "State Authorized Evaluators",
   ];
-  const legalLinks = [
-    { label: "Privacy Policy", href: "/privacy-policy/", icon: EyeOff },
-    { label: "HIPAA Compliance", href: "/hipaa-compliance/", icon: ShieldCheck },
-    { label: "Consent for Telehealth", href: "/consent-for-telehealth/", icon: Video },
-    { label: "Terms of Use", href: "/terms-of-use/", icon: CheckCheck },
-    { label: "Refund Policy", href: "/refund-policy/", icon: HandCoins },
-    { label: "Accessibility Statement", href: "/accessibility-statement/", icon: Accessibility },
-    { label: "Editorial Policy", href: "/editorial-policy/", icon: PenLine },
-    { label: "Disclaimer", href: "/disclaimer/", icon: TriangleAlert },
-  ];
+
 
   return (
     <footer id="contact" className="bg-[#0E3B2E] px-6 pt-20 pb-10" aria-label="Site footer">
@@ -133,11 +113,14 @@ export function SiteFooter() {
         </div>
 
         <nav aria-label="Legal, compliance, and editorial">
-          <p className="whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-[#B8E89A]">
+          <Link
+            href="/legal/"
+            className="whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-[#B8E89A] transition-colors hover:text-white"
+          >
             LEGAL, COMPLIANCE &amp; EDITORIAL
-          </p>
+          </Link>
           <ul className="mt-5 space-y-3">
-            {legalLinks.map(({ label, href, icon: Icon }) => (
+            {legalPages.map(({ label, href, icon: Icon }) => (
               <li key={label}>
                 <Link
                   href={href}

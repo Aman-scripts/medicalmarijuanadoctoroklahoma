@@ -17,6 +17,7 @@ const navLinks = [
   { href: "/doctors/", label: "Our Doctors" },
   { href: "/contact-us/", label: "Contact Us" },
   { href: "/faq/", label: "FAQ" },
+  { href: "/legal/", label: "Legal Policies" },
 ];
 
 export function SiteHeader() {
@@ -28,7 +29,7 @@ export function SiteHeader() {
         </Link>
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-8 text-sm font-medium text-[#0E3B2E]/85 md:flex"
+          className="hidden items-center gap-6 text-sm font-medium text-[#0E3B2E]/85 lg:gap-8 md:flex"
         >
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="transition-colors hover:text-[#0E3B2E]">

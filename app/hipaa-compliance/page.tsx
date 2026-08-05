@@ -201,7 +201,11 @@ export default function HipaaCompliancePage() {
     <div className="flex flex-col bg-[#F6F5F0]">
       <JsonLd data={webPageSchema(pages.hipaa)} />
       <SiteHeader />
-      <PageBreadcrumb page="HIPAA Compliance" currentPath={pages.hipaa.path} />
+      <PageBreadcrumb
+        page="HIPAA Compliance"
+        currentPath={pages.hipaa.path}
+        items={[{ label: "Legal Policies", href: pages.legal.path }]}
+      />
       <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">

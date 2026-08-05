@@ -87,7 +87,11 @@ export default function RefundPolicyPage() {
     <div className="flex flex-col bg-[#F6F5F0]">
       <JsonLd data={webPageSchema(pages.refund)} />
       <SiteHeader />
-      <PageBreadcrumb page="Refund Policy" currentPath={pages.refund.path} />
+      <PageBreadcrumb
+        page="Refund Policy"
+        currentPath={pages.refund.path}
+        items={[{ label: "Legal Policies", href: pages.legal.path }]}
+      />
       <main id="main-content">
         <section className="px-6 py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">

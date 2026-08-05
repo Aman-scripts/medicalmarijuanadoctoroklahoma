@@ -170,6 +170,16 @@ export const pages = {
     priority: 0.3,
     ogType: "article",
   },
+  legal: {
+    path: "/legal/",
+    title: "Legal Policies | Medical Marijuana Doctor OK",
+    description:
+      "Browse privacy, HIPAA, telehealth consent, terms, refunds, accessibility, editorial, and disclaimer policies.",
+    datePublished: "2026-08-05",
+    dateModified: "2026-08-05",
+    changeFrequency: "yearly",
+    priority: 0.5,
+  },
 } as const satisfies Record<string, PageSeo>;
 
 export type PageKey = keyof typeof pages;
