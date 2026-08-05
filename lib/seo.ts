@@ -6,8 +6,8 @@ export const SITE_HOST = `${SITE_URL}/`;
 export const SITE_NAME = "Medical Marijuana Doctor Oklahoma";
 export const SITE_TAGLINE = "Get Your Medical Marijuana Card Online in Oklahoma";
 export const DEFAULT_OG_IMAGE = "/hero-section.jpg";
-export const ABOUT_OG_IMAGE = "/about-hero-section.jpg";
-export const CONTACT_OG_IMAGE = "/about-section-one.png";
+export const ABOUT_OG_IMAGE = "/aboutus-hero-section.webp";
+export const CONTACT_OG_IMAGE = "/contact-us-hero-section.webp";
 
 export type PageSeo = {
   path: string;
