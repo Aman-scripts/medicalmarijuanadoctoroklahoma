@@ -18,7 +18,7 @@ export default function ContributorsPage() {
       <SiteHeader />
       <PageBreadcrumb page="Contributors" currentPath={pages.contributors.path} />
       <main id="main-content">
-        <section className="px-6 pt-16 pb-12 sm:pt-20 sm:pb-14">
+        <section className="px-6 pt-16 pb-10 sm:pt-20 sm:pb-12">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-semibold tracking-[0.22em] text-[#2F7A18] uppercase">
               Contributors
@@ -26,32 +26,16 @@ export default function ContributorsPage() {
             <h1 className="mt-4 font-heading text-4xl font-medium tracking-tight text-[#0E3B2E] sm:text-5xl">
               Our Medical Content Team
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl font-heading text-lg leading-relaxed text-[#0E3B2E]/80 italic sm:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[#0E3B2E]/85 sm:text-lg">
               Every article on Medical Marijuana Doctor Oklahoma is written and reviewed by real
-              people with real credentials, not generated automatically. Here&apos;s who&apos;s
-              behind our content and why we split the writing and reviewing roles.
+              people with real credentials—not generated automatically. A medical writer drafts
+              clear patient-focused content, then a board-certified physician reviews it for
+              clinical accuracy before publication.
             </p>
           </div>
         </section>
 
-        <section className="border-y border-[#0E3B2E]/10 bg-white px-6 py-14 sm:py-16">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-heading text-2xl font-medium tracking-tight text-[#0E3B2E] sm:text-3xl">
-              Why We Separate Writing and Reviewing
-            </h2>
-            <div className="mt-5 space-y-4 text-base leading-relaxed text-[#0E3B2E]/85">
-              <p>
-                We believe medical content is more trustworthy when the person writing it
-                isn&apos;t the only person checking it. Our content writer researches and drafts
-                articles in a way that&apos;s clear and useful for patients. Our medical reviewer,
-                a board-certified physician, then checks that same content for clinical accuracy
-                before it&apos;s published.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-6 py-16 sm:py-20">
+        <section className="px-6 pb-16 sm:pb-20">
           <div className="mx-auto max-w-5xl">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="font-heading text-3xl font-medium tracking-tight text-[#0E3B2E] sm:text-4xl">
