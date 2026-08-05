@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 
 export const SITE_URL = "https://medicalmarijuanadoctoroklahoma.com";
+/** Canonical host with trailing slash for robots.txt Host / URL normalization. */
+export const SITE_HOST = `${SITE_URL}/`;
 export const SITE_NAME = "Medical Marijuana Doctor Oklahoma";
 export const SITE_TAGLINE = "Get Your Medical Marijuana Card Online in Oklahoma";
-export const DEFAULT_OG_IMAGE = "/android-chrome-512x512.png";
+export const DEFAULT_OG_IMAGE = "/hero-section.jpg";
+export const ABOUT_OG_IMAGE = "/about-hero-section.jpg";
+export const CONTACT_OG_IMAGE = "/about-section-one.png";
 
 export type PageSeo = {
   path: string;
@@ -21,6 +25,8 @@ export type PageSeo = {
     | "never";
   priority?: number;
   ogType?: "website" | "article";
+  /** Open Graph / Twitter share image path (public/). Defaults to DEFAULT_OG_IMAGE. */
+  ogImage?: string;
 };
 
 /** Normalize internal paths to trailing-slash form (except site root). */
@@ -51,6 +57,7 @@ export const pages = {
     dateModified: "2026-08-05",
     changeFrequency: "monthly",
     priority: 0.8,
+    ogImage: ABOUT_OG_IMAGE,
   },
   contact: {
     path: "/contact-us/",
@@ -61,6 +68,7 @@ export const pages = {
     dateModified: "2026-08-05",
     changeFrequency: "monthly",
     priority: 0.8,
+    ogImage: CONTACT_OG_IMAGE,
   },
   doctors: {
     path: "/doctors/",
@@ -81,6 +89,16 @@ export const pages = {
     dateModified: "2026-08-05",
     changeFrequency: "monthly",
     priority: 0.7,
+  },
+  reviews: {
+    path: "/reviews/",
+    title: "Patient Reviews | MMJ Doctor Oklahoma",
+    description:
+      "Read verified Google reviews from Oklahoma patients who completed medical marijuana evaluations with our licensed doctors.",
+    datePublished: "2024-01-01",
+    dateModified: "2026-08-05",
+    changeFrequency: "weekly",
+    priority: 0.8,
   },
   privacy: {
     path: "/privacy-policy/",
@@ -203,11 +221,19 @@ export function clampMetaDescription(description: string, max = 130) {
   return (at > max * 0.7 ? cut.slice(0, at) : cut).trimEnd();
 }
 
+const OG_IMAGE_SIZES: Record<string, { width: number; height: number }> = {
+  [DEFAULT_OG_IMAGE]: { width: 800, height: 550 },
+  [ABOUT_OG_IMAGE]: { width: 600, height: 550 },
+  [CONTACT_OG_IMAGE]: { width: 500, height: 400 },
+};
+
 export function buildMetadata(page: PageSeo, extras?: Metadata): Metadata {
   const url = absoluteUrl(page.path);
   const ogType = page.ogType ?? "website";
   const title = clampMetaTitle(page.title);
   const description = clampMetaDescription(page.description);
+  const ogImage = page.ogImage ?? DEFAULT_OG_IMAGE;
+  const size = OG_IMAGE_SIZES[ogImage] ?? { width: 1200, height: 630 };
 
   return {
     title: { absolute: title },
@@ -226,9 +252,9 @@ export function buildMetadata(page: PageSeo, extras?: Metadata): Metadata {
       modifiedTime: page.dateModified,
       images: [
         {
-          url: DEFAULT_OG_IMAGE,
-          width: 512,
-          height: 512,
+          url: ogImage,
+          width: size.width,
+          height: size.height,
           alt: SITE_NAME,
         },
       ],
@@ -237,7 +263,7 @@ export function buildMetadata(page: PageSeo, extras?: Metadata): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [DEFAULT_OG_IMAGE],
+      images: [ogImage],
     },
     other: {
       "article:published_time": page.datePublished,

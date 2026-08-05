@@ -11,8 +11,10 @@ export default function NotFound() {
         id="main-content"
         className="flex flex-1 flex-col items-center justify-center px-6 py-24 text-center"
       >
-        <p className="text-xs font-semibold tracking-[0.2em] text-[#2F7A18]">404 ERROR</p>
-        <h1 className="mt-4 font-heading text-4xl font-medium tracking-tight text-[#0E3B2E] sm:text-5xl">
+        <p className="font-heading text-6xl font-medium tracking-tight text-[#0E3B2E] sm:text-7xl lg:text-8xl">
+          404 ERROR
+        </p>
+        <h1 className="mt-5 font-heading text-2xl font-medium tracking-tight text-[#0E3B2E] sm:text-3xl">
           Page Not Found
         </h1>
         <p className="mx-auto mt-4 max-w-lg leading-relaxed text-[#0E3B2E]/85">
